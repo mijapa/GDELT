@@ -1,0 +1,1 @@
+SELECT MonthYear, Actor2Name , count(*) FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 and Actor2CountryCode = "POL" group by MonthYear, Actor2Name
