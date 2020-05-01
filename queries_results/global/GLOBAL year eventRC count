@@ -1,0 +1,1 @@
+SELECT Year, EventRootCode , count(*) FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 group by Year, EventRootCode

@@ -1,1 +1,0 @@
-SELECT Year, Actor1CountryCode, count(*) FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 group by Year, Actor1CountryCode

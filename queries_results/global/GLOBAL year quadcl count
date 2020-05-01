@@ -1,0 +1,1 @@
+SELECT Year, QuadClass , count(*) FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 group by Year, QuadClass
