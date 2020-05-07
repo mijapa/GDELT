@@ -1,0 +1,2 @@
+SELECT MonthYear, EventRootCode , count(*) FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 and Actor1CountryCode = "USA" group by MonthYear, EventRootCode
+
