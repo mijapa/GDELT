@@ -1,0 +1,1 @@
+SELECT MonthYear, EventRootCode , sum( AvgTone * NumMentions), avg( AvgTone * Nummentions) FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 and Actor1CountryCode = "POL" and Actor2CountryCode= "DEU" group by MonthYear, EventRootCode

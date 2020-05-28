@@ -1,0 +1,1 @@
+SELECT MonthYear, EventRootCode , sum(NumMentions) as SumNumMentions, avg(NumMentions) as AvgNumMentions FROM `gdelt-bq.gdeltv2.events` where Year >= 2015 and Actor1CountryCode = "POL" and Actor2CountryCode= "USA" group by MonthYear, EventRootCode
