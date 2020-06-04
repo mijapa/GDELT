@@ -1,0 +1,11 @@
+SELECT
+  MonthYear,
+  COUNT(DISTINCT Actor2CountryCode) as FightCountries,
+FROM
+  `gdelt-bq.gdeltv2.events`
+WHERE
+  Year >= 2015
+  AND Actor1CountryCode = "DEU"
+  AND EventRootCode = "19"
+GROUP BY
+  MonthYear
