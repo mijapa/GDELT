@@ -1,0 +1,11 @@
+SELECT
+  MonthYear,
+  Actor1CountryCode,
+  COUNT(*) AS Events,
+FROM
+  `gdelt-bq.gdeltv2.events`
+WHERE
+  Year >= 2015
+GROUP BY
+  MonthYear,
+  Actor1CountryCode
