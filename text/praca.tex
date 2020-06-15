@@ -1,0 +1,146 @@
+ \hoffset1cm % przesunięcie poziome (przykładowo) o 1cm przeznaczone na oprawę
+
+ \documentclass[11pt]{report}
+ 
+ \usepackage[T1]{fontenc}
+ \usepackage[utf8]{inputenc}
+ \usepackage{graphicx}
+ \usepackage{amsmath,amssymb,amsfonts}
+ \usepackage{polski}
+ \usepackage[raggedright]{titlesec}
+ \usepackage{amsmath}
+ \usepackage{amssymb}
+ \usepackage{indentfirst}
+ \usepackage{listings}
+ \usepackage{hyperref}
+ \usepackage[backend=biber, bibencoding=utf8, style=ieee, dashed=false, isbn=false, doi=false, sorting=anyvt]{biblatex}
+ 
+ \addbibresource{library.bib}
+ \DeclareUnicodeCharacter{229}{ę}
+ \DeclareUnicodeCharacter{327}{}
+ 
+ \pagestyle{headings}
+ 
+ \renewcommand{\chaptername}{Rozdział}
+ \renewcommand{\contentsname}{Spis treści}
+ \renewcommand{\figurename}{Rys.}
+ \renewcommand{\tablename}{Tab.}
+ \renewcommand{\listfigurename}{Spis rysunków}
+ \renewcommand{\listtablename}{Spis tabel}
+ \renewcommand{\bibname}{Bibliografia}
+
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{1.5em}{2.6em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{4.0em}{3.6em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{7.4em}{4.5em}}
+\makeatother
+
+
+ \begin{document}
+
+ \begin{titlepage}
+ \centering
+\includegraphics[width=0.8 \textwidth]{fig/AGH.jpg}
+ \center{\scshape WYDZIAŁ INFORMATYKI, ELEKTRONIKI\\ I TELEKOMUNIKACJI\\
+         Kierunek Informatyka}
+ \vspace{0.03\textheight}
+ \center{\scshape Michał Patyk}
+ \bigskip
+ \center{\LARGE\bfseries Analiza danych i wzorców dotyczących wydarzeń politycznych na podstawie informacji zgromadzonych w projekcie GDELT}
+ \center{(pracownia problemowa)}
+ \vspace{0.2\textheight}
+ \par
+ \rightline{Opiekun: dr hab. inż. Koźlak Jarosław}
+
+ \vspace{0.1\textheight}
+ \center{Kraków 2020}
+ \end{titlepage}
+
+
+ \tableofcontents
+
+
+ \chapter{Wstęp}
+ 
+ \section{GDELT}
+ GDELT - Global Database of Events, Language, and Tone - to największa, najbardziej wszechstronna i otwarta baza danych jaka powstała. Wczesne poszukiwania prowadzące do stworzenia GDELT zostały opisane przez Philipa Schrodta w dokumencie \cite{Schrodt2010} w styczniu 2010 r. Zbiór danych jest dostępny na stronie Projektu oraz na platformie Google Cloud gdzie można z niego korzystać przez Google BigQuery \cite{BigQuery2014}. GDELT używa kodowania obserwacji konfliktów i mediacji (CAMEO) \cite{GDELTDocumentation} do rejestrowania zdarzeń. 
+
+ 
+ \section{Stan aktualnej wiedzy}
+ \subsection{...}
+ 
+ \section{Motywacja}
+
+
+ \chapter{Cele pracy, zakres pracy, założenia}\label{ch:cele}
+
+ \section{Cele pracy}
+ Celem niniejszej pracy jest \textbf{opracowanie koncepcji sterownika pieca kominkowego} zgodnego ze szkicem specyfikacji Web Thing API oraz \textbf{stworzenie dedykowanego oprogramowania}.
+
+ \section{Zakres pracy}
+ Zakres pracy obejmuje:
+ \begin{enumerate}
+ \item przegląd istniejących rozwiązań - zarówno sprzętowych jak i programowych;
+ \item opracowanie koncepcji;
+ \item wybór podzespołów;
+ \item wykonanie prototypu na płytce stykowej;
+ \item stworzenie oprogramowania;
+ \item przetestowanie oprogramowania; 
+ \item wykonanie prototypu na płytce uniwersalnej;
+ \item wykonanie obudowy;
+ \item zintegrowanie z Mozilla Gateway
+ \end{enumerate}
+ 
+ \section{Założenia i wymagania}
+ 
+ \subsection{Wykorzystane narzędzia}
+ \begin{enumerate}
+ \item[•] środowisko programistyczne PyCharm 
+ \item[•] język programowania Python
+ \item[•] internetowe interaktywne środowisko obliczeniowe Notebook Jupyter
+ \end{enumerate}
+ 
+ \subsection{Wymagania}
+
+ 
+ \section{Efekt końcowy}
+ Planowanym efektem końcowym pracy będzie...
+ 
+ \section{Dalsze kierunki rozwoju}
+ W tej części zostaną opisane możliwe kierunki rozwoju pracy.
+ \subsection{Analiza pod kątem COVID-19}
+ \subsection{Analiza pod kątem grup etnicznych}
+ \subsection{Analiza pod kątem grup religijnych}
+ 
+ 
+ \chapter{Przegląd istniejących analiz}\label{ch:przeglad}
+ \section{•}
+  
+   
+  
+ \chapter[Opracowanie koncepcji budowy sterownika\\ pieca kominkowego]{Opracowanie koncepcji budowy sterownika pieca kominkowego}\label{ch:koncepcja}
+ 
+ 
+ \chapter{Podsumowanie}
+W niniejszej części zostaną opisane wnioski z pracy według kolejności wcześniej przedstawionych rozdziałów.
+
+
+ \inputencoding{utf8}
+ 
+ \newpage
+ \addcontentsline{toc}{chapter}{Książki}
+ \printbibliography[title={Książki},type=book]
+ 
+ \addcontentsline{toc}{chapter}{Artykuły}
+ \printbibliography[title={Artykuły},type=article]
+ 
+ \addcontentsline{toc}{chapter}{Prace dyplomowe}
+ \printbibliography[title={Prace dyplomowe}, type=thesis]
+ 
+ \addcontentsline{toc}{chapter}{Materiały konferencyjne}
+ \printbibliography[title={Materiały konferencyjne},type=inproceedings]
+ 
+ \addcontentsline{toc}{chapter}{Pozostałe źródła}
+ \printbibliography[title={Pozostałe źródła}, nottype=article, nottype=book, nottype=inproceedings, nottype=thesis]
+
+ \end{document}
