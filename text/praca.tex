@@ -65,10 +65,6 @@
  \section{GDELT}
  GDELT - Global Database of Events, Language, and Tone - to największa, najbardziej wszechstronna i otwarta baza danych jaka powstała. Wczesne poszukiwania prowadzące do stworzenia GDELT zostały opisane przez Philipa Schrodta w dokumencie \cite{Schrodt2010} w styczniu 2010 r. Zbiór danych jest dostępny na stronie Projektu oraz na platformie Google Cloud gdzie można z niego korzystać przez Google BigQuery \cite{BigQuery2014}. GDELT używa kodowania obserwacji konfliktów i mediacji (CAMEO) \cite{GDELTDocumentation} do rejestrowania zdarzeń. W zbiorze znajdują się dane od 1979 roku do dnia dzisiejszego. 
 
- 
- \section{Stan aktualnej wiedzy}
- \subsection{...}
- 
  \section{Motywacja}
 
 
@@ -82,6 +78,7 @@
  
  
  \section{Założenia i wymagania}
+ W analizie wykorzystany zostanie głównie zbiór danych GDELT 2.0 od początku 2015 roku do kwietnia 2020.
  
  \subsection{Wykorzystane narzędzia}
  \begin{enumerate}
@@ -90,13 +87,7 @@
  \item[•] internetowe interaktywne środowisko obliczeniowe Notebook Jupyter
  \item[•] hurtownia danych Google BigQuery
  \end{enumerate}
- 
- \subsection{Założenia}
- W analizie wykorzystany zostanie głównie zbiór danych GDELT 2.0 od początku 2015 roku do kwietnia 2020.
- 
- \subsection{Wymagania}
-
- 
+  
  \section{Efekt końcowy}
  Planowanym efektem końcowym pracy będzie...
  
@@ -108,7 +99,6 @@
  
  
  \chapter{Przegląd istniejących analiz}\label{ch:przeglad}
- \section{•}
   
  \chapter{Wstępna analiza danych}
  \section{Popularność Polski w zbiorze danych GDELT}
@@ -367,7 +357,16 @@ Niekwestionowanym liderem pod względem ilości zdarzeń są Stany Zjednoczone. 
 	\caption{Symetryczność siły połączenia Polski i Stanów Zjednoczonych w czasie. (zródło: opracowanie własne)}
 	\label{fig:POL-USA-POL}
 	\end{figure}
+
+ \chapter{Analiza wybranych kodów podstawowych}
+ \section{Fight}
  
+     \begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8 \textwidth]{fig/ERC/Fight.png}
+	\caption{Procentowa ilość krajów z jakimi dany kraj ma zdarzenia fight w czasie. (zródło: opracowanie własne)}
+	\label{fig:Fight}
+	\end{figure}
  
  \chapter{Klasteryzacja} 
  
