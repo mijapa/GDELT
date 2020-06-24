@@ -1,3 +1,5 @@
+%! suppress = Makeatletter
+%! suppress = Makeatletter
 \documentclass[11pt]{report}
 
 \usepackage[T1]{fontenc}
@@ -54,9 +56,10 @@
 
 
     \chapter{Wstęp}
+    Wydarzenia są opisywane przez zaangażowanych aktorów (którymi mogą być państwa lub specyficzne organizacje) oraz lokalizacje i kategorie definiujące charakter wydarzeń (np. różne rodzaje negocjacji , deklaracji politycznych, zamieszki, konflikty zbrojne, itp.), co jest specyfikowane przez zestawy szczegółowych atrybutów.
+
     Postawić problem
     dlaczego chemy realizować
-    % \section{Motywacja}
     na podstawie analiz chcemy lepiej zrozumieć specyfikę krajów
     chęć automatycznej reakcji na to że cos sie dzieje
     informacja o zdarzeniach nietypowych
@@ -65,28 +68,45 @@
 
 
     \section{Cele pracy}
-    Celem niniejszej pracy jest\ldots
-
-
-    \section{Zakres pracy}
-    Zakres pracy obejmuje\ldots
+    Celem niniejszej pracy jest analiza wydarzeń politycznych oraz poszukiwanie występujących w nich wzorców w oparciu o dane projektu GDELT.
 
 
     \chapter{Przegląd dziedziny}
-    jakie cechy zadrzeń aktorów , artykuły analizujące, kto cytował, jakie analizy
-    CAMEO szerzej
+    W tym rozdziale opisany został zbiór danych GDELT, schemat kodwania CAMEO oraz przeprowadzony został przegląd istniejących analiz zbioru.
 
 
     \section{GDELT}
-    GDELT - Global Database of Events, Language, and Tone - to największa, najbardziej wszechstronna i otwarta baza danych jaka powstała. Wczesne poszukiwania prowadzące do stworzenia GDELT zostały opisane przez Philipa Schrodta w dokumencie~\cite{Schrodt2010} w styczniu 2010 r. Zbiór danych jest dostępny na stronie Projektu oraz na platformie Google Cloud gdzie można z niego korzystać przez Google BigQuery~\cite{BigQuery2014}. GDELT używa kodowania obserwacji konfliktów i mediacji (CAMEO)~\cite{GDELTDocumentation} do rejestrowania zdarzeń. W zbiorze znajdują się dane od 1979 roku do dnia dzisiejszego.
+    GDELT - Global Database of Events, Language, and Tone - to największa, najbardziej wszechstronna i otwarta baza danych jaka powstała.
+    Wczesne poszukiwania prowadzące do stworzenia GDELT zostały opisane przez Philipa Schrodta w dokumencie~\cite{Schrodt2010} w styczniu 2010 r.
+    Zbiór danych jest dostępny na stronie Projektu ~\cite{gdelt} oraz na platformie Google Cloud gdzie można z niego korzystać przez Google BigQuery~\cite{BigQuery2014}.
+    GDELT używa kodowania obserwacji konfliktów i mediacji (CAMEO)~\cite{GDELTDocumentation} do rejestrowania zdarzeń.
+    W zbiorze znajdują się dane od 1979 roku.
+    Kolejne porcje zdarzeń i ich klasyfikacja generowane sa na bieżąco każdego dnia.
+
+
+    \section{CAMEO}
+    CAMEO - Conflict and Mediation Event Observations - jest schematem kodowania zdarzeń.
+    Został stworzony w Katedrze Nauk Politycznych Pennsylvania State University.
+    Jego początki sięgają roku 2000.
+    Został zaprojektowany z myślą o automatycznym kodowaniu i szczegółowym kodowaniu aktorów.
+
+    \subsection{Zdarzenia}
+    Kody zdarzeń są ujednolicone pod względem kolejności numerycznej głównych kategorii.
+    Kategorie są uszeregowane rosnąco względem kooperacji od 01 do 09 oraz względem konfliktu od 10 do 20.
+
+    \subsection{Aktorzy}
+    Kody aktorów składają sie z trzech znaków.
+    Elementy kodu są podzielone na szerokie kategorie, takie jak podmioty państwowe, role, regiony i grupy etniczne aktorów.
 
 
     \section{Przegląd istniejących analiz} \label{ch:przeglad}
+%    artykuły analizujące, kto cytował, jakie analizy
 
 
     \chapter{Koncepcja}
-    jaki system chcemy stworzyć
-    wektory, algorytmy klastrowania
+%    jaki system chcemy stworzyć
+%    wektory, algorytmy klastrowania
+    W tym rozdziale zostały opisane\ldots
 
 
     \section{Założenia i wymagania}
@@ -101,15 +121,25 @@
 
 
     \section{Wykorzystane narzędzia}
-    dlaczego takie narzędzia
-    krótko uzasadnić, dać urle do narzędzi i bibliotek
-    dyskusja co można by wykorzystac zamiast tych narzędzi np dane lokalne zamiast bigQuery
+
     \begin{enumerate}
-        \item[•] język programowania Python
-        \item[•] środowisko programistyczne PyCharm
-        \item[•] internetowe interaktywne środowisko obliczeniowe Notebook Jupyter
-        \item[•] hurtownia danych Google BigQuery
+        \item[•] język programowania Python~\cite{python}
+        \item[•] bibliotek Pandas~\cite{pandas}
+        \item[•] środowisko programistyczne PyCharm~\cite{pycharm}
+        \item[•] internetowe interaktywne środowisko obliczeniowe Notebook Jupyter~\cite{jupyter}
+        \item[•] hurtownia danych Google BigQuery~\cite{bigquery}
     \end{enumerate}
+
+%    dyskusja co można by wykorzystac zamiast tych narzędzi np dane lokalne zamiast bigQuery
+
+    Przy tworzniu projektu wykorzystany został język programowania Python.
+    Jest to język wysokiego poziomu ogólnego przeznaczenia.
+    Wraz z biblioteka Pandas jest często stosowany w zagadnieniach analizy danych oraz data miningu.
+    Głównym narzędziem używanym do programowania było zintegrowane środowisko programistyczne PyCharm firmy JetBrains.
+    Pozwala ono na wygodną edycję i analizę kodu źródłowego.
+    Internetowe interaktywne środowisko obliczeniowe Notebook Jupyter pozwoliło na tworzenie dokumentów zawierających kod wraz z wizualizacjami.
+    Wykorzystanie hurtowni danych Google BigQuery pozwoliło na szybką, skalowalną analizę dużego zbioru danych jakim jest GDELT.
+    BigQuery jest oprogramowaniem bezserwerowym, które obsługuje zapytania w języku ANSI SQL.
 
 
     \section{Wstępna analiza danych}
@@ -120,7 +150,8 @@
     Jako pierwszą analizę wykonano badanie popularności Polski w zbiorze danych GDELT. Na wszystkich trzech wykresach obserwujemy znaczny wzrost ilości zdarzeń w 2015 roku. Może być to związane z uruchomieniem w GDELT automatycznego tłumaczenia artykułów i co za tym idzie zwiększeniem ilości źródeł danych.
 
     \paragraph{Polska jako Aktor 1}
-    Wykers~\ref{fig:PLactor1} przedstawia popularność Polski jako aktora 1 skumulowaną dla poszczególnych lat. W roku 2016 obserwujemy szczyt popularności na poziomie około 150 tysięcy zdarzeń.
+    Wykers~\ref{fig:PLactor1} przedstawia popularność Polski jako aktora 1 skumulowaną dla poszczególnych lat.
+    W roku 2016 obserwujemy szczyt popularności na poziomie około 150 tysięcy zdarzeń.
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLactor1.png}
@@ -230,12 +261,18 @@
 
     \paragraph{Kraj para do zdarzenia}
 
+
+    Wykres~\ref{fig:PLpair} przedstawia ilość zdarzeń dla Polski w których parą jest dany kraj.
+
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLactor2Pair.png}
         \caption{Ilość zdarzeń w których parą jest dany kraj. (zródło: opracowanie własne)}
         \label{fig:PLpair}
     \end{figure}
+
+
+    Wykres~\ref{fig:PLpairPerc} przedstawia ilość zdarzeń dla Polski w których parą jest dany kraj w czasie.
 
     WYKRES DO POPRAWY
     \begin{figure}[ht]
@@ -247,59 +284,76 @@
 
     \paragraph{Podstawowy kod zdarzeń}
 
+    Wykres~\ref{fig:PLPERC} przedstawia ilość zdarzeń dla Polski dla poszczególnych kodów podstawowych.
+
+
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLERC.png}
-        \caption{Ilość zdarzeń dla poszczególnych podstawowych kodów. (zródło: opracowanie własne)}
+        \caption{Ilość zdarzeń dla poszczególnych kodów podstawowocy. (zródło: opracowanie własne)}
         \label{fig:PLPERC}
     \end{figure}
+
+    Wykres~\ref{fig:PLPERCinTIME} przedstawia ilość zdarzeń dla Polski dla poszczególnych kodów podstawowych w czasie.
 
     WYKRES DO POPRAWY
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLERCinTIME.png}
-        \caption{Ilość zdarzeń dla poszczególnych podstawowych kodów w czasie. (zródło: opracowanie własne)}
+        \caption{Ilość zdarzeń dla poszczególnych kodów podstawowocy w czasie. (zródło: opracowanie własne)}
         \label{fig:PLPERCinTIME}
     \end{figure}
+
+    Wykres~\ref{fig:PLPERCpercinTIME} przedstawia procentową ilość zdarzeń dla Polski dla poszczególnych kodów podstawowych w czasie.
 
     WYKRES DO POPRAWY
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLERCpercinTIME.png}
-        \caption{Procentowa ilość zdarzeń dla poszczególnych podstawowych kodów w czasie. (zródło: opracowanie własne)}
+        \caption{Procentowa ilość zdarzeń dla poszczególnych kodów podstawowocy w czasie. (zródło: opracowanie własne)}
         \label{fig:PLPERCpercinTIME}
     \end{figure}
 
     \paragraph{Podstawowe kody zdarzeń między Polską a wybranymi krajami}
+
+    Wykres~\ref{fig:PLDEUERC} przedstawia ilość zdarzeń z Niemcami dla poszczególnych kodów podstawowocy w czasie.
+
     WYKRES DO POPRAWY
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLDEUERCperc.png}
-        \caption{Procentowa ilość zdarzeń z Niemcami dla poszczególnych podstawowych kodów w czasie. (zródło: opracowanie własne)}
+        \caption{Procentowa ilość zdarzeń z Niemcami dla poszczególnych kodów podstawowocy w czasie. (zródło: opracowanie własne)}
         \label{fig:PLDEUERC}
     \end{figure}
+
+    Wykres~\ref{fig:PLFRAERC} przedstawia ilość zdarzeń z Francją dla poszczególnych kodów podstawowocy w czasie.
+
 
     WYKRES DO POPRAWY
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLFRAERCperc.png}
-        \caption{Procentowa ilość zdarzeń z Francją dla poszczególnych podstawowych kodów w czasie. (zródło: opracowanie własne)}
+        \caption{Procentowa ilość zdarzeń z Francją dla poszczególnych kodów podstawowocy w czasie. (zródło: opracowanie własne)}
         \label{fig:PLFRAERC}
     \end{figure}
+
+    Wykres~\ref{fig:PLGBRERC} przedstawia ilość zdarzeń z Wielką Brytanią dla poszczególnych kodów podstawowocy w czasie.
 
     WYKRES DO POPRAWY
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLGBRERCperc.png}
-        \caption{Procentowa ilość zdarzeń z Wielka Brytanią dla poszczególnych podstawowych kodów w czasie. (zródło: opracowanie własne)}
+        \caption{Procentowa ilość zdarzeń z Wielka Brytanią dla poszczególnych kodów podstawowocy w czasie. (zródło: opracowanie własne)}
         \label{fig:PLGBRERC}
     \end{figure}
+
+    Wykres~\ref{fig:PLRUSERC} przedstawia ilość zdarzeń z Rosją dla poszczególnych kodów podstawowocy w czasie.
 
     WYKRES DO POPRAWY
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLRUSERCperc.png}
-        \caption{Procentowa ilość zdarzeń z Rosją dla poszczególnych podstawowych kodów w czasie. (zródło: opracowanie własne)}
+        \caption{Procentowa ilość zdarzeń z Rosją dla poszczególnych kodów podstawowocy w czasie. (zródło: opracowanie własne)}
         \label{fig:PLRUSERC}
     \end{figure}
 
@@ -318,6 +372,9 @@
 
     \paragraph{Polska}
 
+    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Polski z wybranaymi krajami w czasie.
+
+
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLConnection.png}
@@ -326,6 +383,8 @@
     \end{figure}
 
     \paragraph{Rosja}
+
+    Wykres~\ref{fig:RUSConnection} przedstawia siłę połączenia Rosji z wybranaymi krajami w czasie.
 
     \begin{figure}[ht]
         \centering
@@ -336,6 +395,8 @@
 
     \paragraph{Niemcy}
 
+    Wykres~\ref{fig:DEUConnection} przedstawia siłę połączenia Niemiec z wybranaymi krajami w czasie.
+
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/DEU/DEUConnection.png}
@@ -344,6 +405,8 @@
     \end{figure}
 
     \paragraph{Stany Zjednoczone}
+
+    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Stanów Zjednoczonych z wybranaymi krajami w czasie.
 
     \begin{figure}[ht]
         \centering
@@ -356,6 +419,9 @@
 
     \paragraph{Polska - Niemcy - Polska}
 
+    Wykres~\ref{fig:POL-DEU-POL} przedstawia symetryczność siły połączenia Polski i Niemiec w czasie.
+
+
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/ConnectionSymmetry/POL-DEU-POL.png}
@@ -365,6 +431,9 @@
 
     \paragraph{Polska - Rosja - Polska}
 
+    Wykres~\ref{fig:POL-RUS-POL} przedstawia symetryczność siły połączenia Polski i Rosji w czasie.
+
+
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/ConnectionSymmetry/POL-RUS-POL.png}
@@ -373,6 +442,9 @@
     \end{figure}
 
     \paragraph{Polska - Stany Zjednoczone - Polska}
+
+    Wykres~\ref{fig:POL-USA-POL} przedstawia symetryczność siły połączenia Polski i Stanów Zjednoczonych w czasie.
+
 
     \begin{figure}[ht]
         \centering
@@ -386,15 +458,19 @@
 
     \subsection{Fight}
 
+    Wykres~\ref{fig:Fight} przedstawia procentową ilość państw z jakimi dany kraj ma zdarzenia fight w czasie.
+
 
     \begin{figure}[ht]
         \centering
         \includegraphics[width=1 \textwidth]{fig/ERC/Fight.png}
-        \caption{Procentowa ilość krajów z jakimi dany kraj ma zdarzenia fight w czasie. (zródło: opracowanie własne)}
+        \caption{Procentowa ilość państw z jakimi dany kraj ma zdarzenia fight w czasie. (zródło: opracowanie własne)}
         \label{fig:Fight}
     \end{figure}
 
     \subsection{Express intent to cooperate}
+
+    Wykres\ldots przedstawia procentową ilość państw z jakimi dany kraj ma zdarzenia fight w czasie.
 
 
     \section{Analiza średniego tonu wydarzeń dla wybranych krajów}
@@ -404,6 +480,18 @@
 
 
     \section{Klasteryzacja}
+
+    \subsection{A}
+    Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
+    \begin{enumerate}
+        \item[•] ilości eventów dla których kraj jest aktorem 1
+        \item[•] ilości wzmianek (numMentions)
+        \item[•] ilości verbal/material z quad description
+        \item[•] średniego średniego tonu
+        \item[•] średniej miary Goldsteina
+        \item[•] ilości zdarzeń Fight
+        \item[•] ilości zdarzeń Express intent to cooperate
+    \end{enumerate}
 
 
     \chapter{Podsumowanie}
