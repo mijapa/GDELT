@@ -1,0 +1,24 @@
+digraph workflowGraph {
+    graph [label = "organizacja pracy", labelloc = t, fontsize = 30];
+    rankdir = LR
+
+    a [label = "stwrozenie zapytania"]
+    b [label = "pobranie danych"]
+    c [label = "import danyc"]
+    d [label = "grupowanie danych"]
+    e [label = "selekcja danych"]
+    f [label = "wizualizacja"]
+
+    subgraph cluster_bigQuery {
+    label = "BigQuery"
+    a -> b
+    }
+
+    subgraph cluster_python {
+    label = "python"
+    b -> c
+    c -> d
+    d -> e
+    e -> f
+    }
+}
