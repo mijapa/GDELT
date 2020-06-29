@@ -1,0 +1,18 @@
+SELECT
+  MonthYear,
+  Actor1CountryCode,
+  COUNT(*) AS Events,
+  SUM(NumMentions) AS sumNumMentions,
+  COUNT(case QuadClass when 4 then 1 else null end)/COUNT(case QuadClass when 2 then 1 else 0 end) AS materialConfCoop,
+  COUNT(case QuadClass when 3 then 1 else null end)/COUNT(case QuadClass when 1 then 1 else 0 end) AS verbalConfCoop,
+  AVG(AvgTone) AS avgAvgTone,
+  AVG(GoldsteinScale) AS avgGoldstein,
+  COUNT(case EventRootCode when '19' then 1 else null end) AS fightCount,
+  COUNT(case EventRootCode when '09' then 1 else null end) AS expressCount
+FROM
+  `gdelt-bq.gdeltv2.events`
+WHERE
+  MonthYear = 202001
+GROUP BY
+  MonthYear,
+  Actor1CountryCode
