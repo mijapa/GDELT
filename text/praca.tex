@@ -125,7 +125,9 @@
 
     \begin{enumerate}
         \item[•] język programowania Python~\cite{python}
-        \item[•] bibliotek Pandas~\cite{pandas}
+        \item[•] biblioteka Pandas~\cite{pandas}
+        \item[•] biblioteka GeoPandas~\cite{geopandas}
+        \item[•] biblioteka Scikit-Learn~\cite{scikit}
         \item[•] środowisko programistyczne PyCharm~\cite{pycharm}
         \item[•] internetowe interaktywne środowisko obliczeniowe Notebook Jupyter~\cite{jupyter}
         \item[•] hurtownia danych Google BigQuery~\cite{bigquery}
@@ -141,6 +143,8 @@
     Internetowe interaktywne środowisko obliczeniowe Notebook Jupyter pozwoliło na tworzenie dokumentów zawierających kod wraz z wizualizacjami.
     Wykorzystanie hurtowni danych Google BigQuery pozwoliło na szybką, skalowalną analizę dużego zbioru danych jakim jest GDELT.
     BigQuery jest oprogramowaniem bezserwerowym, które obsługuje zapytania w języku ANSI SQL.
+    Podział krajów na klastry został wykonany przy użyciu Scikit-Learn.
+    Do wizualizacji klastrów na mapie wykorzystano bibliotekę GeoPandas.
 
 
     \section{Wstępna analiza danych}
@@ -483,7 +487,8 @@
     \section{Klasteryzacja}
 
     \subsection{A}
-    Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
+
+    Do przeprowadzenia pierwszego grupowania krajów wykorzystany został wektor składający się z:
     \begin{enumerate}
         \item[•] ilości zdarzeń dla których kraj jest aktorem 1
         \item[•] ilości wzmianek (numMentions)
@@ -494,6 +499,7 @@
         \item[•] ilości zdarzeń Fight
         \item[•] ilości zdarzeń Express intent to cooperate
     \end{enumerate}
+    Dane wykorzystane w tym doświadczeniu pochodzą ze stycznia 2020 roku.
 
 
     \chapter{Podsumowanie}
