@@ -615,11 +615,21 @@
         \label{fig:clustExport2015_log}
     \end{figure}
 
-%    todo: dodać opis pochodzenia danych
-
     \paragraph{Wyniki klasteryzacji w postacji tabelarycznej}
     W tabelach od~\ref{tab:cl0std} do~\ref{tab:cl9std} przedstawione zostały wyniki grupowania ustandaryzowanych próbek.
-    Dla ułatwienia interpretacji wyników dodano kolorowanie pól.
+    Dla ułatwienia interpretacji wyników grupowania razem z nazwami krajów zostały dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import eksport (jako procent PKB).
+    Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0, przedstawiają sytuację w 2015 roku.
+    \begin{enumerate}
+        \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o wszelkie podatki od produktów i pomniejszona o wszelkie dotacje nieuwzględnione w wartości produktów.
+        \item[Education] Wydatki sektora instytucji rządowych i samorządowych na edukację są wyrażone jako procent PKB.
+        \item[Military] Dane dotyczące wydatków wojskowych z Międzynarodowego Instytutu Badań nad Pokojem w Sztokholmie pochodzą z definicji NATO, która obejmuje wszystkie bieżące i kapitałowe wydatki na siły zbrojne, w tym siły pokojowe.
+        \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i usługi zdrowotne konsumowane w każdym roku.
+        \item[Import] Import towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych otrzymanych z reszty świata.
+        Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i rządowe.
+        Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji (dawniej zwanych usługami faktorowymi) oraz płatności transferowych.
+        \item[Export] Eksport towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych dostarczanych do reszty świata.
+    \end{enumerate}
+    Dodatkowo dokonano kolorowania pól.
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
     Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony, pomarańczowy, żółty, jasnozielony, zielony.
 
@@ -628,13 +638,6 @@
         \includegraphics[width=1 \textwidth]{tables/CLUST/cluster0stdkmeans.png}
         \caption{Klaster 0 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl0std}
-    \end{figure}
-
-    \begin{figure}[ht!]
-        \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster0stdkmeanscount.png}
-        \caption{Klaster 0 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
-        \label{tab:cl0stdcount}
     \end{figure}
 
     \input{./tables/CLUST/desc/clust0std_desc.tex}
