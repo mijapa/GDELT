@@ -598,7 +598,7 @@
 
     \paragraph{Wyniki klasteryzacji w postacji tabelarycznej}
     W tabelach od~\ref{tab:cl0std} do~\ref{tab:cl9std} przedstawione zostały wyniki grupowania ustandaryzowanych próbek.
-    Dla ułatwienia interpretacji wyników grupowania razem z nazwami krajów zostały dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import eksport (jako procent PKB).
+    Dla ułatwienia interpretacji wyników grupowania razem z nazwami krajów zostały dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
     Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0, przedstawiają sytuację w 2015 roku.
     \begin{enumerate}
         \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o wszelkie podatki od produktów i pomniejszona o wszelkie dotacje nieuwzględnione w wartości produktów.
@@ -610,9 +610,12 @@
         Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji (dawniej zwanych usługami faktorowymi) oraz płatności transferowych.
         \item[Export] Eksport towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych dostarczanych do reszty świata.
     \end{enumerate}
-    Dodatkowo dokonano kolorowania pól.
+    Dodatkowo dokonano kolorowania pól z informacjami o krajach.
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
     Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony, pomarańczowy, żółty, jasnozielony, zielony.
+    W tableach od~\ref{tab:cl1stdcount} do~\ref{tab:cl9stdcount} została przedstawiona procentowa ilość państw w poszczególnych przedziałach w obrębie klastrów.
+    W tableach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszególnych klastrów: średnia, mediana, odchylenie standardowe, minimum, maksimum.
+
 
     \begin{figure}[ht!]
         \centering
@@ -620,6 +623,7 @@
         \caption{Klaster 0 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl0std}
     \end{figure}
+    Klaster 0 wyróżnia się bardzo wysokim PKB oraz wydatkami na opiekę zdrowotną.
 
     \input{./tables/CLUST/desc/clust0std_desc.tex}
 
@@ -637,6 +641,8 @@
         \label{tab:cl1stdcount}
     \end{figure}
 
+    Klaster 1 w tabeli~\ref{tab:cl1stdcount} wyróżnia się niskim PKB oraz średnimi wydatkami na opiekę zdrowotną.
+
     \input{./tables/CLUST/desc/clust1std_desc.tex}
 
     \begin{figure}[ht!]
@@ -652,6 +658,8 @@
         \caption{Klaster 2 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl2stdcount}
     \end{figure}
+
+    Klaster 2 w tabeli~\ref{tab:cl2stdcount} wyróżnia się średnimi wydatkami na opiekę zdrowotną oraz niskimi na zbrojenia.
 
     \input{./tables/CLUST/desc/clust2std_desc.tex}
 
@@ -670,6 +678,8 @@
         \label{tab:cl3stdcount}
     \end{figure}
 
+    Klaster 3 w tabeli~\ref{tab:cl3stdcount} wyróżnia się bardzo niskimi wydatkami na zbrojenia.
+
     \begin{figure}[ht!]
         \centering
         \includegraphics[width=1 \textwidth]{tables/CLUST/cluster4stdkmeans.png}
@@ -683,6 +693,8 @@
         \caption{Klaster 4 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl4stdcount}
     \end{figure}
+
+    Klaster 4 w tabeli~\ref{tab:cl4stdcount} wyróżnia się średnimi wydatkami na opiekę zdrowotną oraz bardzo niskimi na zbrojenia.
 
     \input{./tables/CLUST/desc/clust4std_desc.tex}
     \begin{figure}[ht!]
@@ -698,6 +710,8 @@
         \caption{Klaster 5 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl5stdcount}
     \end{figure}
+
+    Klaster 5 w tabeli~\ref{tab:cl5stdcount} wyróżnia się średnim PKB oraz bardzo niskimi wydatkami na zbrojenia.
 
     \input{./tables/CLUST/desc/clust5std_desc.tex}
 
@@ -715,6 +729,8 @@
         \label{tab:cl6stdcount}
     \end{figure}
 
+    Klaster 6 w tabeli~\ref{tab:cl6stdcount} wyróżnia się niskim PKB oraz dużą ilością brakujących danych dla pozostałych parametrów.
+
     \input{./tables/CLUST/desc/clust6std_desc.tex}
 
     \begin{figure}[ht!]
@@ -730,6 +746,8 @@
         \caption{Klaster 7 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl7stdcount}
     \end{figure}
+
+    Klaster 7 w tabeli~\ref{tab:cl7stdcount} wyróżnia się wysokim i bardzo wysokim PKB oraz wysokimi wydatkami na zdrowie.
 
     \input{./tables/CLUST/desc/clust7std_desc.tex}
 
@@ -747,6 +765,9 @@
         \label{tab:cl8stdcount}
     \end{figure}
 
+    Klaster 8 w tabeli~\ref{tab:cl8stdcount} posiada tylko dwa państwa.
+    Żaden z parametrów nie wyróżnia się.
+
     \input{./tables/CLUST/desc/clust8std_desc.tex}
 
     \begin{figure}[ht!]
@@ -762,6 +783,8 @@
         \caption{Klaster 9 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl9stdcount}
     \end{figure}
+
+    Klaster 9 w tabeli~\ref{tab:cl9stdcount} wyróżnia sie niskim PKB, niskimi wydatkami na opiekę zdrowotną oraz zbrojenia.
 
     \input{./tables/CLUST/desc/clust9std_desc.tex}
 
