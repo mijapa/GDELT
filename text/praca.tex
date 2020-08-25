@@ -59,7 +59,7 @@
     //Wydarzenia są opisywane przez zaangażowanych aktorów (którymi mogą być państwa lub specyficzne organizacje) oraz lokalizacje i kategorie definiujące charakter wydarzeń (np. różne rodzaje negocjacji , deklaracji politycznych, zamieszki, konflikty zbrojne, itp.), co jest specyfikowane przez zestawy szczegółowych atrybutów.
 
     //Postawić problem
-    //dlaczego chemy realizować
+    //dlaczego chcemy realizować
     //na podstawie analiz chcemy lepiej zrozumieć specyfikę krajów
     //chęć automatycznej reakcji na to że cos sie dzieje
     //informacja o zdarzeniach nietypowych
@@ -72,7 +72,7 @@
 
 
     \chapter{Przegląd dziedziny}
-    W tym rozdziale opisany został zbiór danych GDELT, schemat kodwania CAMEO oraz przeprowadzony został przegląd istniejących analiz zbioru.
+    W tym rozdziale opisany został zbiór danych GDELT, schemat kodowania CAMEO oraz przeprowadzony został przegląd istniejących analiz zbioru.
 
 
     \section{GDELT}
@@ -133,9 +133,9 @@
         \item[•] hurtownia danych Google BigQuery~\cite{bigquery}
     \end{enumerate}
 
-    // dyskusja co można by wykorzystac zamiast tych narzędzi np dane lokalne zamiast bigQuery
+    // dyskusja co można by wykorzystać zamiast tych narzędzi np dane lokalne zamiast bigQuery
 
-    Przy tworzniu projektu wykorzystany został język programowania Python.
+    Przy tworzeniu projektu wykorzystany został język programowania Python.
     Jest to język wysokiego poziomu ogólnego przeznaczenia.
     Wraz z biblioteka Pandas jest często stosowany w zagadnieniach analizy danych oraz data miningu.
     Głównym narzędziem używanym do programowania było zintegrowane środowisko programistyczne PyCharm firmy JetBrains.
@@ -147,15 +147,16 @@
     Do wizualizacji klastrów na mapie wykorzystano bibliotekę GeoPandas.
 
 
-    \section{Wstępna analiza danych}
+    \chapter{Wstępna analiza danych}
     W tej części pracy przeprowadzona zostanie wstępna analiza zagregowanych danych. W pierwszej kolejności przeanalizowane zostaną dane dotyczące Polski, co pozwoli na łatwiejsze wychwycenie związków między zarejestrowanymi wydarzeniami, a sytuacją w kraju.
     W dalszej kolejności przeprowadzona zostania analiza zbiorcza dla wszystkich krajów.
 
-    \subsection{Popularność Polski w zbiorze danych GDELT}
+
+    \section{Popularność Polski w zbiorze danych GDELT}
     Jako pierwszą analizę wykonano badanie popularności Polski w zbiorze danych GDELT. Na wszystkich trzech wykresach obserwujemy znaczny wzrost liczby zdarzeń w 2015 roku. Może być to związane z uruchomieniem w GDELT automatycznego tłumaczenia artykułów i co za tym idzie zwiększeniem liczby źródeł danych.
 
     \paragraph{Polska jako Aktor 1}
-    Wykers~\ref{fig:PLactor1} przedstawia popularność Polski jako aktora 1 skumulowaną dla poszczególnych lat.
+    Wykres~\ref{fig:PLactor1} przedstawia popularność Polski jako aktora 1 skumulowaną dla poszczególnych lat.
     W roku 2016 obserwujemy szczyt popularności na poziomie około 150 tysięcy zdarzeń.
     \begin{figure}[!htp]
         \centering
@@ -168,10 +169,10 @@
     \end{figure}
 
     \paragraph{Polska jako Aktor 2}
-    Wykers~\ref{fig:PLactor2} przedstawia popularność Polski jako aktora 2 skumulowaną dla poszczególnych lat. Kształt wykresu jest bardzo zbliżony do~\ref{fig:PLactor1} jednak szczyt popularności jest niższy - na poziomie około 130 tysięcy zdarzeń.
+    Wykres~\ref{fig:PLactor2} przedstawia popularność Polski jako aktora 2 skumulowaną dla poszczególnych lat. Kształt wykresu jest bardzo zbliżony do~\ref{fig:PLactor1} jednak szczyt popularności jest niższy - na poziomie około 130 tysięcy zdarzeń.
 
     \paragraph{Polska jako miejsce wydarzeń}
-    Wykers~\ref{fig:PLlocation} przedstawia popularność Polski jako miejsca wydarzeń skumulowaną dla poszczególnych lat. Ponownie kształt wykresu jest zbliżony do~\ref{fig:PLactor1}. W tym przypadku szczyt popularności jest wyższy - na poziomie około 210 tysięcy zdarzeń.
+    Wykres~\ref{fig:PLlocation} przedstawia popularność Polski jako miejsca wydarzeń skumulowaną dla poszczególnych lat. Ponownie kształt wykresu jest zbliżony do~\ref{fig:PLactor1}. W tym przypadku szczyt popularności jest wyższy - na poziomie około 210 tysięcy zdarzeń.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLlocation.png}
@@ -190,7 +191,9 @@
         \caption{Liczba zdarzeń dla poszczególnych krajów. (źródło: opracowanie własne)}
         \label{fig:GLOBALactor1}
     \end{figure}
-    Niekwestionowanym liderem pod względem liczby zdarzeń są Stany Zjednoczone. Dystansują one pozostałe kraje o prawie rząd wielkości. Kraje anglosaskie są szczeegolnie mocno reprezentowane. W czołówce pojawiają sie też kraje znaczace polictycznie oraz silnie skonfliktowane.
+    Niekwestionowanym liderem pod względem liczby zdarzeń są Stany Zjednoczone. Dystansują one pozostałe kraje o prawie rząd wielkości.
+    Kraje anglosaskie są szczególnie mocno reprezentowane.
+    W czołówce pojawiają sie też kraje znaczące politycznie oraz silnie skonfliktowane.
 
     \paragraph{Liczba zdarzeń w czasie}
     Wykres~\ref{fig:GLOBALactor1inTime} przedstawia liczbę zdarzeń dla top 5 krajów skumulowaną dla poszczególnych lat.
@@ -289,7 +292,7 @@
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLERC.png}
-        \caption{Liczba zdarzeń dla poszczególnych kodów podstawowocy. (źródło: opracowanie własne)}
+        \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych. (źródło: opracowanie własne)}
         \label{fig:PLPERC}
     \end{figure}
 
@@ -297,7 +300,7 @@
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLERCinTIME.png}
-        \caption{Liczba zdarzeń dla poszczególnych kodów podstawowocy w czasie. (źródło: opracowanie własne)}
+        \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLPERCinTIME}
     \end{figure}
 
@@ -305,41 +308,41 @@
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/PLERCpercinTIME.png}
-        \caption{Procentowa liczba zdarzeń dla poszczególnych kodów podstawowocy w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLPERCpercinTIME}
     \end{figure}
 
     \paragraph{Podstawowe kody zdarzeń między Polską a wybranymi krajami}
 
-    Wykres~\ref{fig:PLDEUERC} przedstawia liczbę zdarzeń z Niemcami dla poszczególnych kodów podstawowocy w czasie.
+    Wykres~\ref{fig:PLDEUERC} przedstawia liczbę zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLDEUERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Niemcami dla poszczególnych kodów podstawowocy w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLDEUERC}
     \end{figure}
 
-    Wykres~\ref{fig:PLFRAERC} przedstawia liczbę zdarzeń z Francją dla poszczególnych kodów podstawowocy w czasie.
+    Wykres~\ref{fig:PLFRAERC} przedstawia liczbę zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLFRAERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowocy w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLFRAERC}
     \end{figure}
 
-    Wykres~\ref{fig:PLGBRERC} przedstawia liczbę zdarzeń z Wielką Brytanią dla poszczególnych kodów podstawowocy w czasie.
+    Wykres~\ref{fig:PLGBRERC} przedstawia liczbę zdarzeń z Wielką Brytanią dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLGBRERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Wielka Brytanią dla poszczególnych kodów podstawowocy w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Wielka Brytanią dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLGBRERC}
     \end{figure}
 
-    Wykres~\ref{fig:PLRUSERC} przedstawia liczbę zdarzeń z Rosją dla poszczególnych kodów podstawowocy w czasie.
+    Wykres~\ref{fig:PLRUSERC} przedstawia liczbę zdarzeń z Rosją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/PL/POLRUSERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Rosją dla poszczególnych kodów podstawowocy w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Rosją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLRUSERC}
     \end{figure}
 
@@ -358,7 +361,7 @@
 
     \paragraph{Polska}
 
-    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Polski z wybranaymi krajami w czasie.
+    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Polski z wybranymi krajami w czasie.
 
 
     \begin{figure}[!htp]
@@ -370,7 +373,7 @@
 
     \paragraph{Rosja}
 
-    Wykres~\ref{fig:RUSConnection} przedstawia siłę połączenia Rosji z wybranaymi krajami w czasie.
+    Wykres~\ref{fig:RUSConnection} przedstawia siłę połączenia Rosji z wybranymi krajami w czasie.
 
     \begin{figure}[!htp]
         \centering
@@ -381,7 +384,7 @@
 
     \paragraph{Niemcy}
 
-    Wykres~\ref{fig:DEUConnection} przedstawia siłę połączenia Niemiec z wybranaymi krajami w czasie.
+    Wykres~\ref{fig:DEUConnection} przedstawia siłę połączenia Niemiec z wybranymi krajami w czasie.
 
     \begin{figure}[!htp]
         \centering
@@ -392,7 +395,7 @@
 
     \paragraph{Stany Zjednoczone}
 
-    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Stanów Zjednoczonych z wybranaymi krajami w czasie.
+    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Stanów Zjednoczonych z wybranymi krajami w czasie.
 
     \begin{figure}[!htp]
         \centering
@@ -465,11 +468,9 @@
     \section{Analiza miary Goldsteina wydarzeń dla wybranych krajów}
 
 
-    \section{Klasteryzacja}
+    \chapter{Klasteryzacja z wykorzystaniem K-Means - 10~klastrów}
 
-    \subsection{Grupowanie z wykorzystaniem K-Means - 10 klastrów}
-
-    Do przeprowadzenia pierwszego grupowania krajów wykorzystany został wektor składający się z:
+    Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
     \begin{enumerate}
         \item[•] liczby zdarzeń dla których kraj jest aktorem 1
         \item[•] liczby wzmianek (numMentions)
@@ -484,7 +485,8 @@
     Przed dokonaniem klasteryzacji odrzucone zostały wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
     Klasteryzacja została przeprowadzona dwukrotnie, za drugim razem na danych ustandaryzowanych przy pomocy modułu StandardScaler~\cite{standardScaler}.
 
-    \subsubsection{Dane niestandaryzowane}
+
+    \section{Dane niestandaryzowane}
     W pierwszej kolejności zostaną przedstawione wyniki grupowania na danych niestandaryzowanych.
 
     Wykres~\ref{fig:clust10} przedstawia mapę z naniesionymi wynikami klasteryzacji. Każda grupa krajów otrzymała inny kolor.
@@ -496,7 +498,7 @@
         \label{fig:clust10}
     \end{figure}
 
-    \paragraph{Wyniki klasteryzacji w postaci tabelarycznej}
+    \subsection{Wyniki klasteryzacji w postaci tabelarycznej}
     W tabelach od~\ref{tab:cl0} do~\ref{tab:cl9} przedstawione zostały wyniki grupowania.
     Dodatkowo zawarto informacje o liczbie ludności i PKB na osobę pochodzące z biblioteki GeoPandas~\cite{geopandas}.
 
@@ -515,8 +517,9 @@
     Dla danych niestandaryzowanych Polska trafiła do klastra~\ref{tab:cl2} między innymi z Egiptem, Grecją, Irlandia oraz Brazylią.
     Wyróżnia się mniejsza grupa~\ref{tab:cl6} do której trafiły Chiny, Rosja, Wielka Brytania oraz Iran.
 
-    \subsubsection{Dane ustandaryzowane}
-    Standrd Skaler standaryzuje cechy poprzez usunięcie średniej i skalowanie do wariancji jednostkowej.
+
+    \section{Dane ustandaryzowane}
+    Standrd Scaler standaryzuje cechy poprzez usunięcie średniej i skalowanie do wariancji jednostkowej.
     Standardowy wynik próbki x jest obliczany jako:
     z = (x - u) / s
     gdzie u jest średnią próbek, a s jest standardowym odchyleniem próbek.
@@ -557,46 +560,46 @@
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/CLUST/gdp_log.png}
-        \caption{Mapa z PKB na osobę - skala logarytminczna. (źródło: opracowanie własne)}
+        \caption{Mapa z PKB na osobę - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustGDP_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/CLUST/gdp2015.png}
-        \caption{Mapa z PKB - skala logarytminczna. (źródło: opracowanie własne)}
+        \caption{Mapa z PKB - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustGDP2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/CLUST/health2015.png}
-        \caption{Mapa z wydatkami na zdrowie - skala logarytminczna. (źródło: opracowanie własne)}
+        \caption{Mapa z wydatkami na zdrowie - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustHealth2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/CLUST/military2015.png}
-        \caption{Mapa z wydatkami na zbrojenia - skala logarytminczna. (źródło: opracowanie własne)}
+        \caption{Mapa z wydatkami na zbrojenia - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustMilitary2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/CLUST/import2015.png}
-        \caption{Mapa z importem - skala logarytminczna. (źródło: opracowanie własne)}
+        \caption{Mapa z importem - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustImport2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=1 \textwidth]{fig/CLUST/export2015.png}
-        \caption{Mapa z eksportem - skala logarytminczna. (źródło: opracowanie własne)}
+        \caption{Mapa z eksportem - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustExport2015_log}
     \end{figure}
 
-    \paragraph{Wyniki klasteryzacji w postacji tabelarycznej}
+    \subsection{Wyniki klasteryzacji w postaci tabelarycznej}
     W tabelach od~\ref{tab:cl0std} do~\ref{tab:cl9std} przedstawione zostały wyniki grupowania ustandaryzowanych próbek.
     Dla ułatwienia interpretacji wyników grupowania razem z nazwami krajów zostały dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
     Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0~\cite{wblicense}, przedstawiają sytuację w 2015 roku.
@@ -607,14 +610,14 @@
         \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i usługi zdrowotne konsumowane w każdym roku.
         \item[Import] Import towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych otrzymanych z reszty świata.
         Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i rządowe.
-        Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji (dawniej zwanych usługami faktorowymi) oraz płatności transferowych.
+        Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji oraz płatności transferowych.
         \item[Export] Eksport towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych dostarczanych do reszty świata.
     \end{enumerate}
     Dodatkowo dokonano kolorowania pól z informacjami o krajach.
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
     Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony, pomarańczowy, żółty, jasnozielony, zielony.
-    W tableach od~\ref{tab:cl1stdcount} do~\ref{tab:cl9stdcount} została przedstawiona procentowa ilość państw w poszczególnych przedziałach w obrębie klastrów.
-    W tableach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszególnych klastrów: średnia, mediana, odchylenie standardowe, minimum, maksimum.
+    W tabelach od~\ref{tab:cl1stdcount} do~\ref{tab:cl9stdcount} została przedstawiona procentowa ilość państw w poszczególnych przedziałach w obrębie klastrów.
+    W tabelach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszczególnych klastrów: średnia, mediana, odchylenie standardowe, minimum, maksimum.
 
 
     \begin{figure}[!htp]
