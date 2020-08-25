@@ -656,7 +656,8 @@
         \label{fig:Fight}
     \end{figure}
 
-    \chapter{Klasteryzacja z wykorzystaniem K-Means - 10~klastrów}
+
+    \chapter{Klasteryzacja z wykorzystaniem K-Means}
 
     Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
     \begin{enumerate}
@@ -787,7 +788,87 @@
         \label{fig:clustExport2015_log}
     \end{figure}
 
-    \subsection{Wyniki klasteryzacji w postaci tabelarycznej}
+    \subsection{Wyniki klasteryzacji - wykresy gęstości - dane ustandaryzowane}
+    Na wykresach od~\ref{fig:density_events} do~\ref{fig:density_expresscount} przedstawione zostały wykresy gęstości miar wykorzystanych przy grupowaniu w poszczególnych klastrach.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_Events.png}
+        \caption{Gęstość miary Events. (źródło: opracowanie własne)}
+        \label{fig:density_events}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_events} obserwujemy słabą separację klastrów.
+    Wyróżniają się klastry 7 oraz 8 których gęstości są spłaszczone i wydłużone.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_sumNumMentions.png}
+        \caption{Gęstość miary sumNumMentions. (źródło: opracowanie własne)}
+        \label{fig:density_sumnummentions}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_sumnummentions}, podobnie jak na poprzednim, obserwujemy słabą separację klastrów.
+    Ponownie wyróżniają się klastry 7 oraz 8.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_materialConfCoop.png}
+        \caption{Gęstość miary materialConfCoop. (źródło: opracowanie własne)}
+        \label{fig:density_materialconfcoop}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_materialconfcoop} obserwujemy dobrą separację klastrów 1, 3, 4, 5 oraz 8.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_verbalConfCoop.png}
+        \caption{Gęstość miary verbalConfCoop. (źródło: opracowanie własne)}
+        \label{fig:density_verbalconfcoop}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_verbalconfcoop} zauważamy podobieństwo klastrów 1 i 9 oraz 3 i 7.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_avgAvgTone.png}
+        \caption{Gęstość miary avgAvgTone. (źródło: opracowanie własne)}
+        \label{fig:density_avgavgtone}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_avgavgtone} wyróżnia się klaster 8 (największa gęstość) oraz klastry 7 i 8.
+
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_avgGoldstein.png}
+        \caption{Gęstość miary avgGoldstein. (źródło: opracowanie własne)}
+        \label{fig:density_avggoldstein}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_avggoldstein} najbardziej wyróżnia się klaster 8.
+    Pozostałe (z wyjątkiem 2, 7 oraz 9) wyraźnie się oddzielają.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_fightCount.png}
+        \caption{Gęstość miary fightCount. (źródło: opracowanie własne)}
+        \label{tab:density_fightCount}
+    \end{figure}
+
+    Na wykresie~\ref{tab:density_fightCount} większość klastrów osiąga maksimum gęstości w pobliżu wartości 0.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=1 \textwidth]{fig/CLUST/density_expressCount.png}
+        \caption{Gęstość miary expressCount. (źródło: opracowanie własne)}
+        \label{fig:density_expresscount}
+    \end{figure}
+
+    Na wykresie~\ref{fig:density_expresscount}, podobnie jak na poprzednim, obserwujemy skupienie w pobliżu zera.
+    Wyróżniają się klastry 7 i 8, które są spłaszczone i wydłużone.
+
+    \subsection{Wyniki klasteryzacji w postaci tabelarycznej - dane ustandaryzowane}
     W tabelach od~\ref{tab:cl0std} do~\ref{tab:cl9std} przedstawione zostały wyniki grupowania ustandaryzowanych próbek.
     Dla ułatwienia interpretacji wyników grupowania razem z nazwami krajów zostały dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
     Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0~\cite{wblicense}, przedstawiają sytuację w 2015 roku.
@@ -814,7 +895,7 @@
         \caption{Klaster 0 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl0std}
     \end{figure}
-    Klaster 0 wyróżnia się bardzo wysokim PKB oraz wydatkami na opiekę zdrowotną.
+    Klaster 0 w tabeli~ref{tab:cl0std} wyróżnia się bardzo wysokim PKB oraz wydatkami na opiekę zdrowotną.
 
     \input{./tables/CLUST/desc/clust0std_desc.tex}
 
