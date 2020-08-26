@@ -661,14 +661,14 @@
 
     Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
     \begin{enumerate}
-        \item[•] liczby zdarzeń dla których kraj jest aktorem 1
-        \item[•] liczby wzmianek (numMentions)
-        \item[•] stosunku liczby zdarzeń material conflict do material cooperation z quad description
-        \item[•] stosunku liczby zdarzeń verbal conflict do verbal cooperation z quad description
-        \item[•] średniego średniego tonu
-        \item[•] średniej miary Goldsteina
-        \item[•] liczby zdarzeń Fight
-        \item[•] liczby zdarzeń Express intent to cooperate
+        \item[•] liczby zdarzeń dla których kraj jest aktorem 1 (events),
+        \item[•] liczby wzmianek (numMentions) - całkowitej liczba wzmianek o tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone,
+        \item[•] stosunku liczby zdarzeń material conflict do material cooperation z quad description (materialConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
+        \item[•] stosunku liczby zdarzeń verbal conflict do verbal cooperation z quad description (verbalConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
+        \item[•] średniego średniego tonu (avgAvgTone) - średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone. Waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni).
+        \item[•] średniej miary Goldsteina (avgGoldstein) - skala Goldsteina przypisuje wynik liczbowy od -10 do +10, wychwytując teoretyczny potencjalny wpływ, jaki rodzaj zdarzenia będzie miał na stabilność kraju,
+        \item[•] liczby zdarzeń Fight (fightCount)
+        \item[•] liczby zdarzeń Express intent to cooperate (expressCount)
     \end{enumerate}
     Dane wykorzystane w tym doświadczeniu pochodzą ze stycznia 2020 roku.
     Przed dokonaniem klasteryzacji odrzucone zostały wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
@@ -884,7 +884,7 @@
     \end{enumerate}
     Dodatkowo dokonano kolorowania pól z informacjami o krajach.
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
-    Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony, pomarańczowy, żółty, jasnozielony, zielony.
+    Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony (bardzo niskie), pomarańczowy (niskie), żółty (średnie), jasnozielony (wysokie), zielony (bardzo wysokie).
     W tabelach od~\ref{tab:cl1stdcount} do~\ref{tab:cl9stdcount} została przedstawiona procentowa ilość państw w poszczególnych przedziałach w obrębie klastrów.
     W tabelach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszczególnych klastrów: średnia, mediana, odchylenie standardowe, minimum, maksimum.
 
@@ -895,7 +895,9 @@
         \caption{Klaster 0 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl0std}
     \end{figure}
-    Klaster 0 w tabeli~ref{tab:cl0std} wyróżnia się bardzo wysokim PKB oraz wydatkami na opiekę zdrowotną.
+
+    Klaster 0 w tabeli~\ref{tab:cl0std} zawiera 1 kraj.
+    Wyróżnia się bardzo wysokim PKB (powyżej 2.42e+12\$) oraz wydatkami na opiekę zdrowotną (powyżej 1.2\% PKB).
 
     \input{./tables/CLUST/desc/clust0std_desc.tex}
 
@@ -913,7 +915,8 @@
         \label{tab:cl1stdcount}
     \end{figure}
 
-    Klaster 1 w tabeli~\ref{tab:cl1stdcount} wyróżnia się niskim PKB oraz średnimi wydatkami na opiekę zdrowotną.
+    Klaster 1 w tabeli~\ref{tab:cl1stdcount} zawiera 18 krajów.
+    Wyróżnia się niskim PKB (pomiędzy 5.71e+09\$ i 4.29e+10\$) oraz średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\% PKB).
 
     \input{./tables/CLUST/desc/clust1std_desc.tex}
 
@@ -931,7 +934,8 @@
         \label{tab:cl2stdcount}
     \end{figure}
 
-    Klaster 2 w tabeli~\ref{tab:cl2stdcount} wyróżnia się średnimi wydatkami na opiekę zdrowotną oraz niskimi na zbrojenia.
+    Klaster 2 w tabeli~\ref{tab:cl2stdcount} zawiera 12 krajów.
+    Wyróżnia się średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\%PKB) oraz niskimi na zbrojenia (pomiędzy 1.6, a 2.8\% PKB).
 
     \input{./tables/CLUST/desc/clust2std_desc.tex}
 
@@ -950,7 +954,8 @@
         \label{tab:cl3stdcount}
     \end{figure}
 
-    Klaster 3 w tabeli~\ref{tab:cl3stdcount} wyróżnia się bardzo niskimi wydatkami na zbrojenia.
+    Klaster 3 w tabeli~\ref{tab:cl3stdcount} zwiera 43 kraje.
+    Wyróżnia się bardzo niskimi wydatkami na zbrojenia (poniżej 1.6\% PKB).
 
     \begin{figure}[!htp]
         \centering
@@ -966,7 +971,8 @@
         \label{tab:cl4stdcount}
     \end{figure}
 
-    Klaster 4 w tabeli~\ref{tab:cl4stdcount} wyróżnia się średnimi wydatkami na opiekę zdrowotną oraz bardzo niskimi na zbrojenia.
+    Klaster 4 w tabeli~\ref{tab:cl4stdcount} zawiera 26 krajów.
+    Wyróżnia się średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\% PKB) oraz bardzo niskimi na zbrojenia (poniżej 1.6\% PKB).
 
     \input{./tables/CLUST/desc/clust4std_desc.tex}
     \begin{figure}[!htp]
@@ -983,7 +989,8 @@
         \label{tab:cl5stdcount}
     \end{figure}
 
-    Klaster 5 w tabeli~\ref{tab:cl5stdcount} wyróżnia się średnim PKB oraz bardzo niskimi wydatkami na zbrojenia.
+    Klaster 5 w tabeli~\ref{tab:cl5stdcount} zawiera 32 kraje.
+    Wyróżnia się średnim PKB (pomiędzy 4.29e+10\$, a 3.23e+11\$) oraz bardzo niskimi wydatkami na zbrojenia (poniżej 1.6\% PKB).
 
     \input{./tables/CLUST/desc/clust5std_desc.tex}
 
@@ -1001,7 +1008,8 @@
         \label{tab:cl6stdcount}
     \end{figure}
 
-    Klaster 6 w tabeli~\ref{tab:cl6stdcount} wyróżnia się niskim PKB oraz dużą ilością brakujących danych dla pozostałych parametrów.
+    Klaster 6 w tabeli~\ref{tab:cl6stdcount} zawiera 8 krajów.
+    Wyróżnia się niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\%)oraz dużą ilością brakujących danych dla pozostałych parametrów.
 
     \input{./tables/CLUST/desc/clust6std_desc.tex}
 
@@ -1019,7 +1027,8 @@
         \label{tab:cl7stdcount}
     \end{figure}
 
-    Klaster 7 w tabeli~\ref{tab:cl7stdcount} wyróżnia się wysokim i bardzo wysokim PKB oraz wysokimi wydatkami na zdrowie.
+    Klaster 7 w tabeli~\ref{tab:cl7stdcount} zawiera 10 krajów.
+    Wyróżnia się wysokim i bardzo wysokim PKB (pomiędzy 3.23e+11\$, a 1.82e+13\$)oraz wysokimi wydatkami na zdrowie (pomiędzy 7.9, a 12.7\% PKB).
 
     \input{./tables/CLUST/desc/clust7std_desc.tex}
 
@@ -1056,7 +1065,8 @@
         \label{tab:cl9stdcount}
     \end{figure}
 
-    Klaster 9 w tabeli~\ref{tab:cl9stdcount} wyróżnia sie niskim PKB, niskimi wydatkami na opiekę zdrowotną oraz zbrojenia.
+    Klaster 9 w tabeli~\ref{tab:cl9stdcount} zawiera 9 krajów.
+    Wyróżnia sie niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\$), niskimi wydatkami na opiekę zdrowotną (pomiędzy 3, a 4.9\% PKB) oraz zbrojenia (pomiędzy 1.6, a 2.8\% PKB).
 
     \input{./tables/CLUST/desc/clust9std_desc.tex}
 
