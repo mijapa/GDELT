@@ -12,6 +12,12 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage[backend=biber, bibencoding=utf8, style=ieee, dashed=false, isbn=false, doi=false, sorting=anyvt]{biblatex}
+\usepackage{caption}
+\captionsetup{%
+justification=raggedright,
+labelfont=bf,
+singlelinecheck=off
+}
 
 \addbibresource{library.bib}
 
@@ -36,7 +42,7 @@
 
     \begin{titlepage}
         \centering
-        \includegraphics[width=1 \textwidth]{fig/AGH.jpg}
+        \includegraphics[width=\linewidth]{fig/AGH.jpg}
         \center{\scshape WYDZIAŁ INFORMATYKI, ELEKTRONIKI\\ I TELEKOMUNIKACJI\\
         Kierunek Informatyka}
         \vspace{0.03\textheight}
@@ -160,10 +166,10 @@
     W roku 2016 obserwujemy szczyt popularności na poziomie około 150 tysięcy zdarzeń.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLactor1.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLactor1.png}
         \caption{Liczba zdarzeń z Polską jako aktorem 1. (źródło: opracowanie własne)}
         \label{fig:PLactor1}
-        \includegraphics[width=1 \textwidth]{fig/PL/PLactor2.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLactor2.png}
         \caption{Liczba zdarzeń z Polską jako aktorem 2. (źródło: opracowanie własne)}
         \label{fig:PLactor2}
     \end{figure}
@@ -175,7 +181,7 @@
     Wykres~\ref{fig:PLlocation} przedstawia popularność Polski jako miejsca wydarzeń skumulowaną dla poszczególnych lat. Ponownie kształt wykresu jest zbliżony do~\ref{fig:PLactor1}. W tym przypadku szczyt popularności jest wyższy - na poziomie około 210 tysięcy zdarzeń.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLlocation.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLlocation.png}
         \caption{Liczba zdarzeń z Polską jako lokacją. (źródło: opracowanie własne)}
         \label{fig:PLlocation}
     \end{figure}
@@ -187,7 +193,7 @@
     Wykres~\ref{fig:GLOBALactor1} przedstawia sumaryczną liczbę zdarzeń od 2015 roku, dla poszczególnych krajów, uszeregowaną malejąco.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/Actor1.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/Actor1.png}
         \caption{Liczba zdarzeń dla poszczególnych krajów. (źródło: opracowanie własne)}
         \label{fig:GLOBALactor1}
     \end{figure}
@@ -199,7 +205,7 @@
     Wykres~\ref{fig:GLOBALactor1inTime} przedstawia liczbę zdarzeń dla top 5 krajów skumulowaną dla poszczególnych lat.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/Actor1inTIME.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/Actor1inTIME.png}
         \caption{Liczba zdarzeń dla poszczególnych krajów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALactor1inTime}
     \end{figure}
@@ -208,7 +214,7 @@
     Wykres~\ref{fig:GLOBALQC} przedstawia sumaryczną liczbę zdarzeń od 2015 roku, dla poszczególnych czterokodów zdarzeń, uszeregowaną malejąco.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/QC.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/QC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALQC}
     \end{figure}
@@ -217,7 +223,7 @@
     Wykres~\ref{fig:GLOBALQCperc} przedstawia liczbę zdarzeń dla czterokodów zdarzeń skumulowaną dla poszczególnych lat.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/QCperc.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/QCperc.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALQCperc}
     \end{figure}
@@ -226,7 +232,7 @@
     Wykres~\ref{fig:GLOBALEBC} przedstawia sumaryczną liczbę zdarzeń od 2015 roku, dla poszczególnych bazowych kodów zdarzeń, uszeregowaną malejąco.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/EBC.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/EBC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALEBC}
     \end{figure}
@@ -235,7 +241,7 @@
     Wykres~\ref{fig:GLOBALEBCperc} przedstawia liczbę zdarzeń dla top 20 bazowych kodów zdarzeń skumulowaną dla poszczególnych lat.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/EBCperc.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/EBCperc.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALEBCperc}
     \end{figure}
@@ -244,7 +250,7 @@
     Wykres~\ref{fig:GLOBALERC} przedstawia sumaryczną liczbę zdarzeń od 2015 roku, dla poszczególnych podstawowych kodów zdarzeń, uszeregowaną malejąco.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/ERC.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/ERC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALERC}
     \end{figure}
@@ -253,7 +259,7 @@
     Wykres~\ref{fig:GLOBALERCperc} przedstawia liczbę zdarzeń dla top 20 podstawowych kodów zdarzeń skumulowaną dla poszczególnych lat.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/GLOBAL/ERCperc.png}
+        \includegraphics[width=\linewidth]{fig/GLOBAL/ERCperc.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów w czasie. (źródło: opracowanie własne)}
         \label{fig:GLOBALERCperc}
     \end{figure}
@@ -270,7 +276,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLactor2Pair.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLactor2Pair.png}
         \caption{Liczba zdarzeń w których parą jest dany kraj. (źródło: opracowanie własne)}
         \label{fig:PLpair}
     \end{figure}
@@ -279,7 +285,7 @@
     Wykres~\ref{fig:PLpairPerc} przedstawia liczbę zdarzeń dla Polski w których parą jest dany kraj w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLactor2PairPercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLactor2PairPercinTIME.png}
         \caption{Procentowa liczba zdarzeń w których parą jest dany kraj w czasie. (źródło: opracowanie własne)}
         \label{fig:PLpairPerc}
     \end{figure}
@@ -291,7 +297,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLERC.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLERC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych. (źródło: opracowanie własne)}
         \label{fig:PLPERC}
     \end{figure}
@@ -299,7 +305,7 @@
     Wykres~\ref{fig:PLPERCinTIME} przedstawia liczbę zdarzeń dla Polski dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLERCinTIME.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLERCinTIME.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLPERCinTIME}
     \end{figure}
@@ -307,7 +313,7 @@
     Wykres~\ref{fig:PLPERCpercinTIME} przedstawia procentową liczbę zdarzeń dla Polski dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/PLERCpercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/PL/PLERCpercinTIME.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLPERCpercinTIME}
     \end{figure}
@@ -317,7 +323,7 @@
     Wykres~\ref{fig:PLDEUERC} przedstawia liczbę zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/POLDEUERCperc.png}
+        \includegraphics[width=\linewidth]{fig/PL/POLDEUERCperc.png}
         \caption{Procentowa liczba zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLDEUERC}
     \end{figure}
@@ -325,7 +331,7 @@
     Wykres~\ref{fig:PLFRAERC} przedstawia liczbę zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/POLFRAERCperc.png}
+        \includegraphics[width=\linewidth]{fig/PL/POLFRAERCperc.png}
         \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLFRAERC}
     \end{figure}
@@ -333,7 +339,7 @@
     Wykres~\ref{fig:PLGBRERC} przedstawia liczbę zdarzeń z Wielką Brytanią dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/POLGBRERCperc.png}
+        \includegraphics[width=\linewidth]{fig/PL/POLGBRERCperc.png}
         \caption{Procentowa liczba zdarzeń z Wielka Brytanią dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLGBRERC}
     \end{figure}
@@ -341,7 +347,7 @@
     Wykres~\ref{fig:PLRUSERC} przedstawia liczbę zdarzeń z Rosją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/POLRUSERCperc.png}
+        \includegraphics[width=\linewidth]{fig/PL/POLRUSERCperc.png}
         \caption{Procentowa liczba zdarzeń z Rosją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:PLRUSERC}
     \end{figure}
@@ -354,7 +360,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUactor2Pair.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUactor2Pair.png}
         \caption{Liczba zdarzeń w których parą jest dany kraj. (źródło: opracowanie własne)}
         \label{fig:DEUpair}
     \end{figure}
@@ -363,7 +369,7 @@
     Wykres~\ref{fig:DEUpairPerc} przedstawia procentową liczbę zdarzeń dla Niemiec w których parą jest dany kraj w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUactor2PairPercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUactor2PairPercinTIME.png}
         \caption{Procentowa liczba zdarzeń w których parą jest dany kraj w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUpairPerc}
     \end{figure}
@@ -375,7 +381,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUERC.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUERC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych. (źródło: opracowanie własne)}
         \label{fig:DEUPERC}
     \end{figure}
@@ -383,7 +389,7 @@
     Wykres~\ref{fig:DEUPERCinTIME} przedstawia liczbę zdarzeń dla Niemiec dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUERCinTIME.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUERCinTIME.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUPERCinTIME}
     \end{figure}
@@ -391,7 +397,7 @@
     Wykres~\ref{fig:DEUPERCpercinTIME} przedstawia procentową liczbę zdarzeń dla Niemiec dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUERCpercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUERCpercinTIME.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUPERCpercinTIME}
     \end{figure}
@@ -401,7 +407,7 @@
     Wykres~\ref{fig:DEUPOLERC} przedstawia liczbę zdarzeń z Polską dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUPOLERCperc.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUPOLERCperc.png}
         \caption{Procentowa liczba zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUPOLERC}
     \end{figure}
@@ -409,7 +415,7 @@
     Wykres~\ref{fig:DEURUSERC} przedstawia liczbę zdarzeń z Rosją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEURUSERCperc.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEURUSERCperc.png}
         \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:DEURUSERC}
     \end{figure}
@@ -422,7 +428,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSactor2Pair.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSactor2Pair.png}
         \caption{Liczba zdarzeń w których parą jest dany kraj. (źródło: opracowanie własne)}
         \label{fig:RUSpair}
     \end{figure}
@@ -431,7 +437,7 @@
     Wykres~\ref{fig:RUSpairPerc} przedstawia procentową liczbę zdarzeń dla Niemiec w których parą jest dany kraj w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSactor2PairPercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSactor2PairPercinTIME.png}
         \caption{Procentowa liczba zdarzeń w których parą jest dany kraj w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSpairPerc}
     \end{figure}
@@ -442,7 +448,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSERC.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSERC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych. (źródło: opracowanie własne)}
         \label{fig:RUSPERC}
     \end{figure}
@@ -450,7 +456,7 @@
     Wykres~\ref{fig:RUSPERCinTIME} przedstawia liczbę zdarzeń dla Rosji dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSERCinTIME.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSERCinTIME.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSPERCinTIME}
     \end{figure}
@@ -458,7 +464,7 @@
     Wykres~\ref{fig:RUSPERCpercinTIME} przedstawia procentową liczbę zdarzeń dla Rosji dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSERCpercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSERCpercinTIME.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSPERCpercinTIME}
     \end{figure}
@@ -468,7 +474,7 @@
     Wykres~\ref{fig:RUSPOLERC} przedstawia liczbę zdarzeń z Polską dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSPOLERCperc.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSPOLERCperc.png}
         \caption{Procentowa liczba zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSPOLERC}
     \end{figure}
@@ -476,7 +482,7 @@
     Wykres~\ref{fig:RUSRUSERC} przedstawia liczbę zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSDEUERCperc.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSDEUERCperc.png}
         \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSRUSERC}
     \end{figure}
@@ -489,7 +495,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAactor2Pair.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAactor2Pair.png}
         \caption{Liczba zdarzeń w których parą jest dany kraj. (źródło: opracowanie własne)}
         \label{fig:USApair}
     \end{figure}
@@ -498,7 +504,7 @@
     Wykres~\ref{fig:USApairPerc} przedstawia procentową liczbę zdarzeń dla Stanów Zjednoczonych w których parą jest dany kraj w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAactor2PairPercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAactor2PairPercinTIME.png}
         \caption{Procentowa liczba zdarzeń w których parą jest dany kraj w czasie. (źródło: opracowanie własne)}
         \label{fig:USApairPerc}
     \end{figure}
@@ -509,7 +515,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAERC.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAERC.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych. (źródło: opracowanie własne)}
         \label{fig:USAPERC}
     \end{figure}
@@ -517,7 +523,7 @@
     Wykres~\ref{fig:USAPERCinTIME} przedstawia liczbę zdarzeń dla Stanów Zjednoczonych dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAERCinTIME.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAERCinTIME.png}
         \caption{Liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:USAPERCinTIME}
     \end{figure}
@@ -525,7 +531,7 @@
     Wykres~\ref{fig:USAPERCpercinTIME} przedstawia procentową liczbę zdarzeń dla Stanów Zjednoczonych dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAERCpercinTIME.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAERCpercinTIME.png}
         \caption{Procentowa liczba zdarzeń dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:USAPERCpercinTIME}
     \end{figure}
@@ -535,7 +541,7 @@
     Wykres~\ref{fig:USAPOLERC} przedstawia liczbę zdarzeń z Polską dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAPOLERCperc.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAPOLERCperc.png}
         \caption{Procentowa liczba zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:USAPOLERC}
     \end{figure}
@@ -543,7 +549,7 @@
     Wykres~\ref{fig:USADEUERC} przedstawia liczbę zdarzeń z Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USADEUERCperc.png}
+        \includegraphics[width=\linewidth]{fig/USA/USADEUERCperc.png}
         \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:USADEUERC}
     \end{figure}
@@ -551,7 +557,7 @@
     Wykres~\ref{fig:USARUSERC} przedstawia liczbę zdarzeń z Rosją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USADEUERCperc.png}
+        \includegraphics[width=\linewidth]{fig/USA/USADEUERCperc.png}
         \caption{Procentowa liczba zdarzeń z Francją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:USARUSERC}
     \end{figure}
@@ -568,7 +574,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/PL/POLConnection.png}
+        \includegraphics[width=\linewidth]{fig/PL/POLConnection.png}
         \caption{Siła połączenia Polski z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:PLConnection}
     \end{figure}
@@ -579,7 +585,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/RUS/RUSConnection.png}
+        \includegraphics[width=\linewidth]{fig/RUS/RUSConnection.png}
         \caption{Siła połączenia Rosji z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSConnection}
     \end{figure}
@@ -590,7 +596,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/DEU/DEUConnection.png}
+        \includegraphics[width=\linewidth]{fig/DEU/DEUConnection.png}
         \caption{Siła połączenia Niemiec z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUConnection}
     \end{figure}
@@ -601,7 +607,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/USA/USAConnection.png}
+        \includegraphics[width=\linewidth]{fig/USA/USAConnection.png}
         \caption{Siła połączenia Stanów Zjednoczonych z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:USAConnection}
     \end{figure}
@@ -615,7 +621,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/ConnectionSymmetry/POL-DEU-POL.png}
+        \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-DEU-POL.png}
         \caption{Symetryczność siły połączenia Polski i Niemiec w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-DEU-POL}
     \end{figure}
@@ -627,7 +633,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/ConnectionSymmetry/POL-RUS-POL.png}
+        \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-RUS-POL.png}
         \caption{Symetryczność siły połączenia Polski i Rosji w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-RUS-POL}
     \end{figure}
@@ -639,7 +645,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/ConnectionSymmetry/POL-USA-POL.png}
+        \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-USA-POL.png}
         \caption{Symetryczność siły połączenia Polski i Stanów Zjednoczonych w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-USA-POL}
     \end{figure}
@@ -651,7 +657,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/ERC/Fight.png}
+        \includegraphics[width=\linewidth]{fig/ERC/Fight.png}
         \caption{Procentowa liczba państw z jakimi dany kraj ma zdarzenia fight w czasie. (źródło: opracowanie własne)}
         \label{fig:Fight}
     \end{figure}
@@ -682,7 +688,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/10clusterMap.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/10clusterMap.png}
         \caption{Mapa z wynikami klasteryzacji. (źródło: opracowanie własne)}
         \label{fig:clust10}
     \end{figure}
@@ -691,17 +697,75 @@
     W tabelach od~\ref{tab:cl0} do~\ref{tab:cl9} przedstawione zostały wyniki grupowania.
     Dodatkowo zawarto informacje o liczbie ludności i PKB na osobę pochodzące z biblioteki GeoPandas~\cite{geopandas}.
 
-    \input{./tables/CLUST/clust0kmeans.tex}
-    \input{./tables/CLUST/clust1kmeans.tex}
-    \input{./tables/CLUST/clust2kmeans.tex}
-    \input{./tables/CLUST/clust3kmeans.tex}
-    \input{./tables/CLUST/clust4kmeans.tex}
-    \input{./tables/CLUST/clust5kmeans.tex}
-    \input{./tables/CLUST/clust6kmeans.tex}
-    \input{./tables/CLUST/clust7kmeans.tex}
-    \input{./tables/CLUST/clust8kmeans.tex}
-    \input{./tables/CLUST/clust9kmeans.tex}
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust0kmeans.png}
+        \caption{Klaster 0. (źródło: opracowanie własne)}
+        \label{tab:cl0}
+    \end{table}
 
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust1kmeans.png}
+        \caption{Klaster 1. (źródło: opracowanie własne)}
+        \label{tab:cl1}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust2kmeans.png}
+        \caption{Klaster 2. (źródło: opracowanie własne)}
+        \label{tab:cl2}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust3kmeans.png}
+        \caption{Klaster 3. (źródło: opracowanie własne)}
+        \label{tab:cl3}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust4kmeans.png}
+        \caption{Klaster 4. (źródło: opracowanie własne)}
+        \label{tab:cl4}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust5kmeans.png}
+        \caption{Klaster 5. (źródło: opracowanie własne)}
+        \label{tab:cl5}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust6kmeans.png}
+        \caption{Klaster 6. (źródło: opracowanie własne)}
+        \label{tab:cl6}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust7kmeans.png}
+        \caption{Klaster 7. (źródło: opracowanie własne)}
+        \label{tab:cl7}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust8kmeans.png}
+        \caption{Klaster 8. (źródło: opracowanie własne)}
+        \label{tab:cl8}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust9kmeans.png}
+        \caption{Klaster 9. (źródło: opracowanie własne)}
+        \label{tab:cl9}
+    \end{table}
 
     Dla danych niestandaryzowanych Polska trafiła do klastra~\ref{tab:cl2} między innymi z Egiptem, Grecją, Irlandia oraz Brazylią.
     Wyróżnia się mniejsza grupa~\ref{tab:cl6} do której trafiły Chiny, Rosja, Wielka Brytania oraz Iran.
@@ -718,7 +782,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/10clusterMap_std.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/10clusterMap_std.png}
         \caption{Mapa z wynikami klasteryzacji. (źródło: opracowanie własne)}
         \label{fig:clust10std}
     \end{figure}
@@ -727,63 +791,63 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/population.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/population.png}
         \caption{Mapa z populacją krajów. (źródło: opracowanie własne)}
         \label{fig:clustPop}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/gdp.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/gdp.png}
         \caption{Mapa z PKP na osobę. (źródło: opracowanie własne)}
         \label{fig:clustGDP}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/population_log.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/population_log.png}
         \caption{Mapa z populacją krajów - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustPop_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/gdp_log.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/gdp_log.png}
         \caption{Mapa z PKB na osobę - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustGDP_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/gdp2015.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/gdp2015.png}
         \caption{Mapa z PKB - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustGDP2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/health2015.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/health2015.png}
         \caption{Mapa z wydatkami na zdrowie - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustHealth2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/military2015.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/military2015.png}
         \caption{Mapa z wydatkami na zbrojenia - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustMilitary2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/import2015.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/import2015.png}
         \caption{Mapa z importem - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustImport2015_log}
     \end{figure}
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/export2015.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/export2015.png}
         \caption{Mapa z eksportem - skala logarytmiczna. (źródło: opracowanie własne)}
         \label{fig:clustExport2015_log}
     \end{figure}
@@ -793,7 +857,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_Events.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_Events.png}
         \caption{Gęstość miary Events. (źródło: opracowanie własne)}
         \label{fig:density_events}
     \end{figure}
@@ -803,7 +867,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_sumNumMentions.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_sumNumMentions.png}
         \caption{Gęstość miary sumNumMentions. (źródło: opracowanie własne)}
         \label{fig:density_sumnummentions}
     \end{figure}
@@ -813,7 +877,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_materialConfCoop.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_materialConfCoop.png}
         \caption{Gęstość miary materialConfCoop. (źródło: opracowanie własne)}
         \label{fig:density_materialconfcoop}
     \end{figure}
@@ -822,7 +886,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_verbalConfCoop.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_verbalConfCoop.png}
         \caption{Gęstość miary verbalConfCoop. (źródło: opracowanie własne)}
         \label{fig:density_verbalconfcoop}
     \end{figure}
@@ -831,7 +895,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_avgAvgTone.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_avgAvgTone.png}
         \caption{Gęstość miary avgAvgTone. (źródło: opracowanie własne)}
         \label{fig:density_avgavgtone}
     \end{figure}
@@ -841,7 +905,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_avgGoldstein.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_avgGoldstein.png}
         \caption{Gęstość miary avgGoldstein. (źródło: opracowanie własne)}
         \label{fig:density_avggoldstein}
     \end{figure}
@@ -851,7 +915,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_fightCount.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_fightCount.png}
         \caption{Gęstość miary fightCount. (źródło: opracowanie własne)}
         \label{tab:density_fightCount}
     \end{figure}
@@ -860,7 +924,7 @@
 
     \begin{figure}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{fig/CLUST/density_expressCount.png}
+        \includegraphics[width=\linewidth]{fig/CLUST/density_expressCount.png}
         \caption{Gęstość miary expressCount. (źródło: opracowanie własne)}
         \label{fig:density_expresscount}
     \end{figure}
@@ -876,6 +940,7 @@
         \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o wszelkie podatki od produktów i pomniejszona o wszelkie dotacje nieuwzględnione w wartości produktów.
         \item[Education] Wydatki sektora instytucji rządowych i samorządowych na edukację są wyrażone jako procent PKB.
         \item[Military] Dane dotyczące wydatków wojskowych z Międzynarodowego Instytutu Badań nad Pokojem w Sztokholmie pochodzą z definicji NATO, która obejmuje wszystkie bieżące i kapitałowe wydatki na siły zbrojne, w tym siły pokojowe.
+        Wartości mniejsze niż 0.01\% zostały odrzucone w celu dostosowania skali logarytmicznej.
         \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i usługi zdrowotne konsumowane w każdym roku.
         \item[Import] Import towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych otrzymanych z reszty świata.
         Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i rządowe.
@@ -889,186 +954,254 @@
     W tabelach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszczególnych klastrów: średnia, mediana, odchylenie standardowe, minimum, maksimum.
 
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster0stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster0stdkmeans.png}
         \caption{Klaster 0 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl0std}
-    \end{figure}
+    \end{table}
 
     Klaster 0 w tabeli~\ref{tab:cl0std} zawiera 1 kraj.
     Wyróżnia się bardzo wysokim PKB (powyżej 2.42e+12\$) oraz wydatkami na opiekę zdrowotną (powyżej 1.2\% PKB).
 
-    \input{./tables/CLUST/desc/clust0std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster1stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust0std_desc.png}
+        \caption{Parametry klastra 0 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl0std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster1stdkmeans.png}
         \caption{Klaster 1 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl1std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster1stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster1stdkmeanscount.png}
         \caption{Klaster 1 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl1stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 1 w tabeli~\ref{tab:cl1stdcount} zawiera 18 krajów.
     Wyróżnia się niskim PKB (pomiędzy 5.71e+09\$ i 4.29e+10\$) oraz średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\% PKB).
 
-    \input{./tables/CLUST/desc/clust1std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster2stdkmeans.png}
+        \caption{Parametry klastra 1 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl1std_desc}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust1std_desc.png}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster2stdkmeans.png}
         \caption{Klaster 2 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl2std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster2stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster2stdkmeanscount.png}
         \caption{Klaster 2 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl2stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 2 w tabeli~\ref{tab:cl2stdcount} zawiera 12 krajów.
     Wyróżnia się średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\%PKB) oraz niskimi na zbrojenia (pomiędzy 1.6, a 2.8\% PKB).
 
-    \input{./tables/CLUST/desc/clust2std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster3stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust2std_desc.png}
+        \caption{Parametry klastra 2 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl2std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster3stdkmeans.png}
         \caption{Klaster 3 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl3std}
-    \end{figure}
-    \input{./tables/CLUST/desc/clust3std_desc.tex}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster3stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust3std_desc.png}
+        \caption{Parametry klastra 3 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl3std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster3stdkmeanscount.png}
         \caption{Klaster 3 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl3stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 3 w tabeli~\ref{tab:cl3stdcount} zwiera 43 kraje.
     Wyróżnia się bardzo niskimi wydatkami na zbrojenia (poniżej 1.6\% PKB).
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster4stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster4stdkmeans.png}
         \caption{Klaster 4 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl4std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster4stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster4stdkmeanscount.png}
         \caption{Klaster 4 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl4stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 4 w tabeli~\ref{tab:cl4stdcount} zawiera 26 krajów.
     Wyróżnia się średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\% PKB) oraz bardzo niskimi na zbrojenia (poniżej 1.6\% PKB).
 
-    \input{./tables/CLUST/desc/clust4std_desc.tex}
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster5stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust4std_desc.png}
+        \caption{Parametry klastra 4 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl4std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster5stdkmeans.png}
         \caption{Klaster 5 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl5std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster5stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster5stdkmeanscount.png}
         \caption{Klaster 5 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl5stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 5 w tabeli~\ref{tab:cl5stdcount} zawiera 32 kraje.
     Wyróżnia się średnim PKB (pomiędzy 4.29e+10\$, a 3.23e+11\$) oraz bardzo niskimi wydatkami na zbrojenia (poniżej 1.6\% PKB).
 
-    \input{./tables/CLUST/desc/clust5std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster6stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust5std_desc.png}
+        \caption{Parametry klastra 5 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl5std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster6stdkmeans.png}
         \caption{Klaster 6 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl6std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster6stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster6stdkmeanscount.png}
         \caption{Klaster 6 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl6stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 6 w tabeli~\ref{tab:cl6stdcount} zawiera 8 krajów.
     Wyróżnia się niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\%)oraz dużą ilością brakujących danych dla pozostałych parametrów.
 
-    \input{./tables/CLUST/desc/clust6std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster7stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust6std_desc.png}
+        \caption{Parametry klastra 6 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl6std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster7stdkmeans.png}
         \caption{Klaster 7 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl7std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster7stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster7stdkmeanscount.png}
         \caption{Klaster 7 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl7stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 7 w tabeli~\ref{tab:cl7stdcount} zawiera 10 krajów.
     Wyróżnia się wysokim i bardzo wysokim PKB (pomiędzy 3.23e+11\$, a 1.82e+13\$)oraz wysokimi wydatkami na zdrowie (pomiędzy 7.9, a 12.7\% PKB).
 
-    \input{./tables/CLUST/desc/clust7std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster8stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust7std_desc.png}
+        \caption{Parametry klastra 7 - dane standaryzowane}
+        \label{tab:cl7std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster8stdkmeans.png}
         \caption{Klaster 8 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl8std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster8stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster8stdkmeanscount.png}
         \caption{Klaster 8 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl8stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 8 w tabeli~\ref{tab:cl8stdcount} posiada tylko dwa państwa.
     Żaden z parametrów nie wyróżnia się.
 
-    \input{./tables/CLUST/desc/clust8std_desc.tex}
-
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster9stdkmeans.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust8std_desc.png}
+        \caption{Parametry klastra 8 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl8std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster9stdkmeans.png}
         \caption{Klaster 9 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl9std}
-    \end{figure}
+    \end{table}
 
-    \begin{figure}[!htp]
+    \begin{table}[!htp]
         \centering
-        \includegraphics[width=1 \textwidth]{tables/CLUST/cluster9stdkmeanscount.png}
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster9stdkmeanscount.png}
         \caption{Klaster 9 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
         \label{tab:cl9stdcount}
-    \end{figure}
+    \end{table}
 
     Klaster 9 w tabeli~\ref{tab:cl9stdcount} zawiera 9 krajów.
     Wyróżnia sie niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\$), niskimi wydatkami na opiekę zdrowotną (pomiędzy 3, a 4.9\% PKB) oraz zbrojenia (pomiędzy 1.6, a 2.8\% PKB).
 
-    \input{./tables/CLUST/desc/clust9std_desc.tex}
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust9std_desc.png}
+        \caption{Parametry klastra 9 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl9std_desc}
+    \end{table}
+
+    Tabele~\ref{tab:cl_mean_summ} oraz~\ref{tab:cl_median_summ} zawierają podsumowanie parametrów poszczególnych klastrów.
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/cluster_mean_summary.png}
+        \caption{Średnie wartości parametrów w klastrach. (źródło: opracowanie własne)}
+        \label{tab:cl_mean_summ}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/cluster_median_summary.png}
+        \caption{Mediany wartości parametrów w klastrach. (źródło: opracowanie własne)}
+        \label{tab:cl_median_summ}
+    \end{table}
 
 
     Zarówno dla danych nie poddanych oraz poddanych standaryzacji Stany Zjednoczono otrzymały własny klaster -~\ref{tab:cl7} oraz ~\ref{tab:cl0std}.
