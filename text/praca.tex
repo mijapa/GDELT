@@ -663,7 +663,7 @@ singlelinecheck=off
     \end{figure}
 
 
-    \chapter{Klasteryzacja z wykorzystaniem K-Means}
+    \chapter[Klasteryzacja K-Means]{Klasteryzacja z wykorzystaniem K-Means}
 
     Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
     \begin{enumerate}
@@ -961,8 +961,16 @@ singlelinecheck=off
         \label{tab:cl0std}
     \end{table}
 
-    Klaster 0 w tabeli~\ref{tab:cl0std} zawiera 1 kraj.
-    Wyróżnia się bardzo wysokim PKB (powyżej 2.42e+12\$) oraz wydatkami na opiekę zdrowotną (powyżej 1.2\% PKB).
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/cluster0stdkmeanscount.png}
+        \caption{Klaster 0 - ilość państw w poszczególnych przedziałach. (źródło: opracowanie własne)}
+        \label{tab:cl0stdcount}
+    \end{table}
+
+    Klaster 0 w tabeli~\ref{tab:cl0std} zawiera 30 krajów.
+    Przykłady ważniejszych państw w tym klastrze to: Estonia, Islandia, Luksemburg, Portugalia, Zjednoczone Emiraty Arabskie, Wietnam.
+    W tabeli~\ref{tab:cl0stdcount} obserwujemy, że w klastrze 0 przeważają (2/3) kraje z niskimi i średnimi wydatkami na opiekę zdrowotną (pomiędzy 3, a 7.9\% PKB).
 
     \begin{table}[!htp]
         \centering
@@ -985,8 +993,8 @@ singlelinecheck=off
         \label{tab:cl1stdcount}
     \end{table}
 
-    Klaster 1 w tabeli~\ref{tab:cl1stdcount} zawiera 18 krajów.
-    Wyróżnia się niskim PKB (pomiędzy 5.71e+09\$ i 4.29e+10\$) oraz średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\% PKB).
+    Klaster 1 w tabeli~\ref{tab:cl1stdcount} zawiera 3 kraje - Indie, Liban oraz Palestynę.
+    W tabeli~\ref{tab:cl1stdcount} obserwujemy, że wszystkie państwa w klastrze 1 charakteryzują się średnim eksportem (pomiędzy 2.5\%, a 5.1\% PKB).
 
     \begin{table}[!htp]
         \centering
@@ -1009,8 +1017,8 @@ singlelinecheck=off
         \label{tab:cl2stdcount}
     \end{table}
 
-    Klaster 2 w tabeli~\ref{tab:cl2stdcount} zawiera 12 krajów.
-    Wyróżnia się średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\%PKB) oraz niskimi na zbrojenia (pomiędzy 1.6, a 2.8\% PKB).
+    Klaster 2 w tabeli~\ref{tab:cl2stdcount} zawiera 3 kraje - Botswanę, Gwineę Bissau oraz .
+    W tabeli~\ref{tab:cl2stdcount} obserwujemy, że wszystkie państwa w klastrze 2 charakteryzują się niskim eksportem (pomiędzy 1.2\%, a 2.5\% PKB).
 
     \begin{table}[!htp]
         \centering
@@ -1040,8 +1048,9 @@ singlelinecheck=off
         \label{tab:cl3stdcount}
     \end{table}
 
-    Klaster 3 w tabeli~\ref{tab:cl3stdcount} zwiera 43 kraje.
-    Wyróżnia się bardzo niskimi wydatkami na zbrojenia (poniżej 1.6\% PKB).
+    Klaster 3 w tabeli~\ref{tab:cl3stdcount} zwiera 10 krajów.
+    Przykłady ważniejszych państw w tym klastrze to: Chiny, Francja, Niemcy, Rosja, Wielka Brytania.
+    W tabeli~\ref{tab:cl3stdcount} obserwujemy, że w klastrze 3 przeważają kraje z wysokim oraz bardzo wysokim PKB (pomiędzy 3.23e+11\$, a 1.82e+13\$).
 
     \begin{table}[!htp]
         \centering
@@ -1057,8 +1066,9 @@ singlelinecheck=off
         \label{tab:cl4stdcount}
     \end{table}
 
-    Klaster 4 w tabeli~\ref{tab:cl4stdcount} zawiera 26 krajów.
-    Wyróżnia się średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9, a 7.9\% PKB) oraz bardzo niskimi na zbrojenia (poniżej 1.6\% PKB).
+    Klaster 4 w tabeli~\ref{tab:cl4stdcount} zawiera 8 krajów.
+    Przykłady ważniejszych państw w tym klastrze to: Kenia, Somalia, Syria.
+    W tabeli~\ref{tab:cl4stdcount} obserwujemy, że w klastrze 4 przeważają kraje z niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\$).
 
     \begin{table}[!htp]
         \centering
@@ -1081,8 +1091,9 @@ singlelinecheck=off
         \label{tab:cl5stdcount}
     \end{table}
 
-    Klaster 5 w tabeli~\ref{tab:cl5stdcount} zawiera 32 kraje.
-    Wyróżnia się średnim PKB (pomiędzy 4.29e+10\$, a 3.23e+11\$) oraz bardzo niskimi wydatkami na zbrojenia (poniżej 1.6\% PKB).
+    Klaster 5 w tabeli~\ref{tab:cl5stdcount} zawiera 21 krajów.
+    Przykłady ważniejszych państw w tym klastrze to: Chile, Nigeria, Pakistan, Polska, Szwecja.
+    W tabeli~\ref{tab:cl5stdcount} obserwujemy, że w klastrze 5 przeważają kraje ze średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9\%, a 7.9\% PKB).
 
     \begin{table}[!htp]
         \centering
@@ -1105,8 +1116,9 @@ singlelinecheck=off
         \label{tab:cl6stdcount}
     \end{table}
 
-    Klaster 6 w tabeli~\ref{tab:cl6stdcount} zawiera 8 krajów.
-    Wyróżnia się niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\%)oraz dużą ilością brakujących danych dla pozostałych parametrów.
+    Klaster 6 w tabeli~\ref{tab:cl6stdcount} zawiera 49 krajów.
+    Przykłady ważniejszych państw w tym klastrze to: Białoruś, Bułgaria, Czechy, Finlandia, Węgry, Norwegia.
+    W tabeli~\ref{tab:cl6stdcount} obserwujemy, że w klastrze 6 przeważają kraje z wysokimi wydatkami na edukację (pomiędzy 4\%, a 5.5\% PKB).
 
     \begin{table}[!htp]
         \centering
@@ -1129,8 +1141,8 @@ singlelinecheck=off
         \label{tab:cl7stdcount}
     \end{table}
 
-    Klaster 7 w tabeli~\ref{tab:cl7stdcount} zawiera 10 krajów.
-    Wyróżnia się wysokim i bardzo wysokim PKB (pomiędzy 3.23e+11\$, a 1.82e+13\$)oraz wysokimi wydatkami na zdrowie (pomiędzy 7.9, a 12.7\% PKB).
+    Klaster 7 w tabeli~\ref{tab:cl7stdcount} zawiera 2 kraje - Iran i Irak.
+    W tabeli~\ref{tab:cl7stdcount} obserwujemy, że w klastrze 7 żaden z parametrów nie wyróżnia się.
 
     \begin{table}[!htp]
         \centering
@@ -1153,8 +1165,8 @@ singlelinecheck=off
         \label{tab:cl8stdcount}
     \end{table}
 
-    Klaster 8 w tabeli~\ref{tab:cl8stdcount} posiada tylko dwa państwa.
-    Żaden z parametrów nie wyróżnia się.
+    Klaster 8 w tabeli~\ref{tab:cl8stdcount} posiada tylko jedno państwo - Stany Zjednoczone Ameryki.
+    W tabeli~\ref{tab:cl8stdcount} obserwujemy, że klaster 8 wyróżnia sie bardzo wysokim PKB (2.42e+12\$, a 1.82e+13\$).
 
     \begin{table}[!htp]
         \centering
@@ -1177,8 +1189,9 @@ singlelinecheck=off
         \label{tab:cl9stdcount}
     \end{table}
 
-    Klaster 9 w tabeli~\ref{tab:cl9stdcount} zawiera 9 krajów.
-    Wyróżnia sie niskim PKB (pomiędzy 5.71e+09\$, a 4.29e+10\$), niskimi wydatkami na opiekę zdrowotną (pomiędzy 3, a 4.9\% PKB) oraz zbrojenia (pomiędzy 1.6, a 2.8\% PKB).
+    Klaster 9 w tabeli~\ref{tab:cl9stdcount} zawiera 31 krajów.
+    Przykłady ważniejszych państw w tym klastrze to: Gwatemala, Honduras, Kuwejt, Meksyk, Słowacja.
+    W tabeli~\ref{tab:cl9stdcount} obserwujemy, że klaster 9 wyróżnia sie niskimi wydatkami na zbrojenia (pomiędzy 0.7\%, a 1.48\% PKB).
 
     \begin{table}[!htp]
         \centering
