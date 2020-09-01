@@ -62,19 +62,20 @@ singlelinecheck=off
 
 
     \chapter{Wstęp}
-    //Wydarzenia są opisywane przez zaangażowanych aktorów (którymi mogą być państwa lub specyficzne organizacje) oraz lokalizacje i kategorie definiujące charakter wydarzeń (np. różne rodzaje negocjacji , deklaracji politycznych, zamieszki, konflikty zbrojne, itp.), co jest specyfikowane przez zestawy szczegółowych atrybutów.
 
-    //Postawić problem
-    //dlaczego chcemy realizować
-    //na podstawie analiz chcemy lepiej zrozumieć specyfikę krajów
-    //chęć automatycznej reakcji na to że cos sie dzieje
-    //informacja o zdarzeniach nietypowych
-    //jak społeczności reagują
-    //patrz dyplom KKI
+    W tym rozdziale została opisana motywacja oraz cele pracy.
+
+
+    \section{Motywacja}
+    Projekt GDELT monitoruje doniesienia medialne ze wszystkich krajów, w ponad 100 językach, każdego dnia.
+    Wszystkie wydarzenia opisane są przez aktorów, lokalizacje i charakter aktywności, co jest specyfikowane poprzez zestaw atrybutów.
+    Analiza atrybutów może umożliwić lepsze zrozumienie specyfiki krajów.
+    Wykrycie wzorców może pozwolić na automatyczną reakcję na zdarzenia, prognozowanie oraz wykrywanie zdarzeń nietypowych.
 
 
     \section{Cele pracy}
     Celem niniejszej pracy jest analiza wydarzeń politycznych oraz poszukiwanie występujących w nich wzorców w oparciu o dane projektu GDELT.
+    Grupowanie krajów na podstawie atrybutów z bazy danych GDELT pozwoli na wykazanie związku z rzeczywistymi cechami państw.
 
 
     \chapter{Przegląd dziedziny}
@@ -110,21 +111,24 @@ singlelinecheck=off
 
 
     \chapter{Koncepcja}
-    // jaki system chcemy stworzyć
-    // wektory, algorytmy klastrowania
 
-    W tym rozdziale zostały opisane\ldots
+    W tym rozdziale zostały opisane założenia i wymagania oraz efekt końcowy projektu.
 
 
     \section{Założenia i wymagania}
     W analizie wykorzystany zostanie głównie zbiór danych GDELT 2.0 od początku 2015 roku do kwietnia 2020.
+    Do grupowania państw w klastry zostanie wykorzystany wektor cech z bazy GDELT oraz algorytm klastrowania k-średnich.
 
 
     \section{Efekt końcowy}
-    Planowanym efektem końcowym pracy będzie\ldots
+    Stworzony w projekcie system pozwoli na grupowanie państw na podstawie medialnych informacji zebranych w bazie GDELT.
+    Przeprowadzone grupowanie państw w klastry pozwoli na uzyskanie uproszczonego, zagregowanego obrazu sytuacji geopolitycznej.
+    Planowanym efektem końcowym pracy będzie wykazanie, że na bazie cech z bazy danych GDELT możemy skategoryzować państwa o rzeczywistych cechach takich jak PKB, wydatki na zbrojenia, edukację i ochronę zdrowia.
 
 
     \chapter{Realizacja}
+
+    W tym rozdziale opisane zostały metody i narzędzia wykorzystane podczas realizacji projektu oraz plan pracy.
 
 
     \section{Wykorzystane narzędzia}
@@ -139,8 +143,6 @@ singlelinecheck=off
         \item[•] hurtownia danych Google BigQuery~\cite{bigquery}
     \end{enumerate}
 
-    // dyskusja co można by wykorzystać zamiast tych narzędzi np dane lokalne zamiast bigQuery
-
     Przy tworzeniu projektu wykorzystany został język programowania Python.
     Jest to język wysokiego poziomu ogólnego przeznaczenia.
     Wraz z biblioteka Pandas jest często stosowany w zagadnieniach analizy danych oraz data miningu.
@@ -151,6 +153,11 @@ singlelinecheck=off
     BigQuery jest oprogramowaniem bezserwerowym, które obsługuje zapytania w języku ANSI SQL.
     Podział krajów na klastry został wykonany przy użyciu Scikit-Learn.
     Do wizualizacji klastrów na mapie wykorzystano bibliotekę GeoPandas.
+
+
+    \section{Plan pracy}
+    W pierwszej kolejności przeprowadzona zostanie wstępna analiza danych, która pozwoli na zorientowanie w jakim stopniu poszczególne cechy zdarzeń z bazy GDELT odzwierciedlają rzeczywiste zdarzenia i relacje między krajami.
+    Następnie przeprowadzone zostanie grupowanie państw metodą k-średnich w oparciu o wybrane cechy zdarzeń.
 
 
     \chapter{Wstępna analiza danych}
@@ -1226,18 +1233,34 @@ singlelinecheck=off
 
 
     \chapter{Podsumowanie}
-    W niniejszej części zostaną opisane wnioski z pracy według kolejności wcześniej przedstawionych rozdziałów.
+    W niniejszej części zostaną opisane wnioski z pracy według kolejności wcześniej przedstawionych rozdziałów oraz propozycje dalszych kierunków rozwoju.
+
+
+    \section{Wnioski}
+    \ldots
 
 
     \section{Dalsze kierunki rozwoju}
-    W tej części zostaną opisane możliwe kierunki rozwoju pracy.
+    Poniżej przedstawiono propozycje dalszych kierunków rozwoju pracy.
+
+    \paragraph{Badanie innych wektorów grupowania}
+    Próba znalezienia cech zdarzeń lepiej odpowiadających rzeczywistym podziałom krajów na grupy.
+
+    \paragraph{Analiza dynamiczna grupowania krajów}
+    Przeprowadzenie klasteryzacji w kolejnych przedziałach czasowych.
+    Analiza zmian przynależności krajów do klastrów.
 
     \paragraph{Analiza pod kątem COVID-19}
+    Analiza danych z bazy GDELT pod kątem zmian w relacjach krajów spowodowanych rozwojem pandemii koronawirusa.
+    Sprawdzenie czy wzorce zmian zachowań obserwowanych podczas pandemii występowały już wcześniej.
 
     \paragraph{Analiza pod kątem grup etnicznych}
+    Analiza zdarzeń z podziałem na grupy etniczne.
+    Klastrowanie grup etnicznych.
 
     \paragraph{Analiza pod kątem grup religijnych}
-
+    Analiza zdarzeń z podziałem na grupy religijne.
+    Klastrowanie grup religijnych.
 
     \inputencoding{utf8}
 
