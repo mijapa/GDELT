@@ -178,6 +178,7 @@ singlelinecheck=off
 
     W tym rozdziale w części~\ref{sec:wykorzystane-narzędzia} opisane zostały metody i narzędzia wykorzystane podczas realizacji projektu.
     W części~\ref{sec:plan-pracy} przedstawiony został plan pracy.
+    Część~\ref{sec:organizacja-pracy} prezentuje organizację pracy nad zadaniem.
 
 
     \section{Wykorzystane narzędzia}\label{sec:wykorzystane-narzędzia}
@@ -195,18 +196,54 @@ singlelinecheck=off
     Przy tworzeniu projektu wykorzystany został język programowania Python.
     Jest to język wysokiego poziomu ogólnego przeznaczenia.
     Wraz z biblioteka Pandas jest często stosowany w zagadnieniach analizy danych oraz data miningu.
+    Pandas jest łatwym w użyciu narzędziem open source które oferuje w szczególności struktury danych i operacje do manipulacji tabelami numerycznymi.
     Głównym narzędziem używanym do programowania było zintegrowane środowisko programistyczne PyCharm firmy JetBrains.
     Pozwala ono na wygodną edycję i analizę kodu źródłowego.
     Internetowe interaktywne środowisko obliczeniowe Notebook Jupyter pozwoliło na tworzenie dokumentów zawierających kod wraz z wizualizacjami.
     Wykorzystanie hurtowni danych Google BigQuery pozwoliło na szybką, skalowalną analizę dużego zbioru danych jakim jest GDELT.
     BigQuery jest oprogramowaniem bezserwerowym, które obsługuje zapytania w języku ANSI SQL.
     Podział krajów na klastry został wykonany przy użyciu Scikit-Learn.
-    Do wizualizacji klastrów na mapie wykorzystano bibliotekę GeoPandas.
+    Do wizualizacji klastrów na mapie wykorzystano bibliotekę GeoPandas, która jest projektem open source mającym na celu ułatwienie pracy z danymi geograficznymi.
 
 
     \section{Plan pracy}\label{sec:plan-pracy}
+
     W pierwszej kolejności przeprowadzona zostanie wstępna analiza danych, która pozwoli na zorientowanie w jakim stopniu poszczególne cechy zdarzeń z bazy GDELT odzwierciedlają rzeczywiste zdarzenia i relacje między krajami.
     Następnie przeprowadzone zostanie grupowanie państw metodą k-średnich w oparciu o wybrane cechy zdarzeń.
+
+
+    \section{Organizacja pracy}\label{sec:organizacja-pracy}
+    Praca nad zadaniem przebiegała wg schematu przedstawionego na rysunku~\ref{fig:organizacjia}.
+
+    \begin{figure}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{fig/organizacja.png}
+        \caption{Organizacja pracy. (źródło: opracowanie własne)}
+        \label{fig:organizacjia}
+    \end{figure}
+
+    Najpierw w hurtowni danych BigQuery tworzone będą zapytania do bazy danych GDELT pozwalające na agregację, filtrowanie i grupowanie danych.
+    Poniżej przykład zapytania.
+
+    \begin{verbatim}
+    SELECT
+      MonthYear,
+      Actor1CountryCode,
+      COUNT(*) AS Events,
+    FROM
+      `gdelt-bq.gdeltv2.events`
+    WHERE
+      Year >= 2015
+    GROUP BY
+      MonthYear,
+      Actor1CountryCode
+    \end{verbatim}
+
+    Wyniki zapytań będą zapisywane lokalnie, na dysk, do dalszej obróbki.
+    Następnie w środowisku programistycznym PyCharm dla poszczególnych zagadnień tworzone będą notatniki jupyter łączące kod języka python z wizualizacjami.
+    W notatnikach, zapisane wcześniej na dysku dane, będą importowane, a następnie grupowane tak aby na pojedynczym wykresie zamieści możliwie dużo informacji.
+    Przedostatnim etapem będzie selekcja najistotniejszych danych w celu poprawy czytelności wykresów.
+    Na końcu tworzone będą i zapisywane do plików wizualizacje danych.
 
 
     \chapter{Wstępna analiza danych}\label{ch:wstępna-analiza-danych}
@@ -899,10 +936,10 @@ singlelinecheck=off
         \centering
         \includegraphics[width=\linewidth]{fig/CLUST/density_fightCount.png}
         \caption{Gęstość miary fightCount. (źródło: opracowanie własne)}
-        \label{tab:density_fightCount}
+        \label{fig:density_fightcount}
     \end{figure}
 
-    Na wykresie~\ref{tab:density_fightCount} większość klastrów osiąga maksimum gęstości w pobliżu wartości 0.
+    Na wykresie~\ref{fig:density_fightcount} większość klastrów osiąga maksimum gęstości w pobliżu wartości 0.
 
     \begin{figure}[!htp]
         \centering
