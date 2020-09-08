@@ -161,7 +161,8 @@ singlelinecheck=off
 
 
     \chapter{Wstępna analiza danych}
-    W tej części pracy przeprowadzona zostanie wstępna analiza zagregowanych danych. W pierwszej kolejności przeanalizowane zostaną dane dotyczące Polski, co pozwoli na łatwiejsze wychwycenie związków między zarejestrowanymi wydarzeniami, a sytuacją w kraju.
+    W tej części pracy przeprowadzona zostanie wstępna analiza danych.
+    W pierwszej kolejności przeanalizowane zostaną dane dotyczące Polski, co pozwoli na łatwiejsze wychwycenie związków między zarejestrowanymi wydarzeniami, a sytuacją w kraju.
     W dalszej kolejności przeprowadzona zostania analiza zbiorcza dla wszystkich krajów.
 
 
@@ -494,7 +495,7 @@ singlelinecheck=off
         \label{fig:RUSRUSERC}
     \end{figure}
 
-    \subsection{Stan zjednoczone}
+    \subsection{Stan Zjednoczone}
 
     \paragraph{Kraj para do zdarzenia}
 
@@ -660,17 +661,19 @@ singlelinecheck=off
 
     \section{Analiza kodu podstawowego Fight}
 
-    Wykres~\ref{fig:Fight} przedstawia procentową liczbę państw z jakimi dany kraj ma zdarzenia fight w czasie.
+    Wykres~\ref{fig:Fight} przedstawia procentową liczbę państw z jakimi dany wybrany kraj ma zdarzenia fight w czasie.
+    Obserwujemy wystąpienie zdarzeń fight dla Polski mimo, iż nie prowadziła ona działań wojennych w tym okresie.
+    Spowodowane jest to możliwością klasyfikowania do fight uroczystości mających na celu upamiętnienie wydarzeń historycznych.
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ERC/Fight.png}
-        \caption{Procentowa liczba państw z jakimi dany kraj ma zdarzenia fight w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba państw z jakimi dany wybrany kraj ma zdarzenia fight w czasie. (źródło: opracowanie własne)}
         \label{fig:Fight}
     \end{figure}
 
 
-    \chapter[Klasteryzacja K-Means]{Klasteryzacja z wykorzystaniem K-Means}
+    \chapter[Grupowanie państw]{Grupowanie państw o~podobnych cechach i~porównanie z danymi zewnętrznymi}
 
     Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
     \begin{enumerate}
@@ -859,7 +862,7 @@ singlelinecheck=off
         \label{fig:clustExport2015_log}
     \end{figure}
 
-    \subsection{Wyniki klasteryzacji - wykresy gęstości - dane ustandaryzowane}
+    \subsection{Wyniki klasteryzacji - wykresy gęstości miar użytych do klastrowania - dane ustandaryzowane}
     Na wykresach od~\ref{fig:density_events} do~\ref{fig:density_expresscount} przedstawione zostały wykresy gęstości miar wykorzystanych przy grupowaniu w poszczególnych klastrach.
 
     \begin{figure}[!htp]
