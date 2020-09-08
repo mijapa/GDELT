@@ -694,7 +694,8 @@ singlelinecheck=off
     \section{Dane niestandaryzowane}
     W pierwszej kolejności zostaną przedstawione wyniki grupowania na danych niestandaryzowanych.
 
-    Wykres~\ref{fig:clust10} przedstawia mapę z naniesionymi wynikami klasteryzacji. Każda grupa krajów otrzymała inny kolor.
+    Wykres~\ref{fig:clust10} przedstawia mapę z naniesionymi wynikami klasteryzacji.
+    Każda grupa krajów otrzymała inny kolor.
 
     \begin{figure}[!htp]
         \centering
@@ -703,82 +704,7 @@ singlelinecheck=off
         \label{fig:clust10}
     \end{figure}
 
-    \subsection{Wyniki klasteryzacji w postaci tabelarycznej}
-    W tabelach od~\ref{tab:cl0} do~\ref{tab:cl9} przedstawione zostały wyniki grupowania.
-    Dodatkowo zawarto informacje o liczbie ludności i PKB na osobę pochodzące z biblioteki GeoPandas~\cite{geopandas}.
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust0kmeans.png}
-        \caption{Klaster 0. (źródło: opracowanie własne)}
-        \label{tab:cl0}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust1kmeans.png}
-        \caption{Klaster 1. (źródło: opracowanie własne)}
-        \label{tab:cl1}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust2kmeans.png}
-        \caption{Klaster 2. (źródło: opracowanie własne)}
-        \label{tab:cl2}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust3kmeans.png}
-        \caption{Klaster 3. (źródło: opracowanie własne)}
-        \label{tab:cl3}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust4kmeans.png}
-        \caption{Klaster 4. (źródło: opracowanie własne)}
-        \label{tab:cl4}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust5kmeans.png}
-        \caption{Klaster 5. (źródło: opracowanie własne)}
-        \label{tab:cl5}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust6kmeans.png}
-        \caption{Klaster 6. (źródło: opracowanie własne)}
-        \label{tab:cl6}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust7kmeans.png}
-        \caption{Klaster 7. (źródło: opracowanie własne)}
-        \label{tab:cl7}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust8kmeans.png}
-        \caption{Klaster 8. (źródło: opracowanie własne)}
-        \label{tab:cl8}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/clust9kmeans.png}
-        \caption{Klaster 9. (źródło: opracowanie własne)}
-        \label{tab:cl9}
-    \end{table}
-
-    Dla danych niestandaryzowanych Polska trafiła do klastra~\ref{tab:cl2} między innymi z Egiptem, Grecją, Irlandia oraz Brazylią.
-    Wyróżnia się mniejsza grupa~\ref{tab:cl6} do której trafiły Chiny, Rosja, Wielka Brytania oraz Iran.
+    Szczegółowe wyniki grupowania znajdują się w dodatku~\ref{ch:dodatek_niestd}.
 
 
     \section{Dane ustandaryzowane}
@@ -1267,6 +1193,99 @@ singlelinecheck=off
     \paragraph{Analiza pod kątem grup religijnych}
     Analiza zdarzeń z podziałem na grupy religijne.
     Klastrowanie grup religijnych.
+
+    \appendix
+    \newpage
+
+
+    \chapter[Wyniki grupowania]{Wyniki grupowania danych niestandaryzowanych}\label{ch:dodatek_niestd}
+    W tym dodatku przedstawione zostały wyniki klasteryzacji danych nie poddanych standaryzacji.
+
+    W tabelach od~\ref{tab:cl0} do~\ref{tab:cl9} przedstawione zostały wyniki grupowania.
+    Dodatkowo zawarto informacje o liczbie ludności i PKB na osobę pochodzące z biblioteki GeoPandas~\cite{geopandas}.
+
+    Klaster 0 w tabeli~\ref{tab:cl0} zawiera 4 kraje.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust0kmeans.png}
+        \caption{Klaster 0. (źródło: opracowanie własne)}
+        \label{tab:cl0}
+    \end{table}
+
+    Klaster 1 w tabeli~\ref{tab:cl1} zawiera 15 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust1kmeans.png}
+        \caption{Klaster 1. (źródło: opracowanie własne)}
+        \label{tab:cl1}
+    \end{table}
+
+    Klaster 2 w tabeli~\ref{tab:cl2} zawiera 34 kraje.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust2kmeans.png}
+        \caption{Klaster 2. (źródło: opracowanie własne)}
+        \label{tab:cl2}
+    \end{table}
+
+    Klaster 3 w tabeli~\ref{tab:cl3} zawiera 8 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust3kmeans.png}
+        \caption{Klaster 3. (źródło: opracowanie własne)}
+        \label{tab:cl3}
+    \end{table}
+
+    Klaster 4 w tabeli~\ref{tab:cl4} zawiera 31 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust4kmeans.png}
+        \caption{Klaster 4. (źródło: opracowanie własne)}
+        \label{tab:cl4}
+    \end{table}
+
+    Klaster 5 w tabeli~\ref{tab:cl5} zawiera 13 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust5kmeans.png}
+        \caption{Klaster 5. (źródło: opracowanie własne)}
+        \label{tab:cl5}
+    \end{table}
+
+    Klaster 6 w tabeli~\ref{tab:cl6} zawiera 35 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust6kmeans.png}
+        \caption{Klaster 6. (źródło: opracowanie własne)}
+        \label{tab:cl6}
+    \end{table}
+
+    Klaster 7 w tabeli~\ref{tab:cl7} zawiera 9 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust7kmeans.png}
+        \caption{Klaster 7. (źródło: opracowanie własne)}
+        \label{tab:cl7}
+    \end{table}
+
+    Klaster 8 w tabeli~\ref{tab:cl8} zawiera tylko jeden kraj - Stany Zjednoczone Ameryki.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust8kmeans.png}
+        \caption{Klaster 8. (źródło: opracowanie własne)}
+        \label{tab:cl8}
+    \end{table}
+
+    Klaster 9 w tabeli~\ref{tab:cl9} zawiera 12 krajów.
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/clust9kmeans.png}
+        \caption{Klaster 9. (źródło: opracowanie własne)}
+        \label{tab:cl9}
+    \end{table}
+
+    Dla danych niestandaryzowanych Polska trafiła do klastra~\ref{tab:cl9} między innymi z Egiptem, Grecją, Irlandia oraz Brazylią.
+    Wyróżnia się mniejsza grupa~\ref{tab:cl0} do której trafiły Chiny, Rosja, Wielka Brytania oraz Iran.
 
     \inputencoding{utf8}
 
