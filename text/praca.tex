@@ -153,6 +153,20 @@ singlelinecheck=off
     Przed dokonaniem klasteryzacji odrzucone zostaną wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
     Klasteryzacja zostanie przeprowadzona dwukrotnie, za drugim razem na danych ustandaryzowanych przy pomocy modułu StandardScaler~\cite{standardScaler}.
 
+    Dla ułatwienia interpretacji wyników grupowania zostaną dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
+    Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0~\cite{wblicense}, przedstawiają sytuację w 2015 roku.
+    \begin{enumerate}
+        \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o wszelkie podatki od produktów i pomniejszona o wszelkie dotacje nieuwzględnione w wartości produktów.
+        \item[Education] Wydatki sektora instytucji rządowych i samorządowych na edukację są wyrażone jako procent PKB.
+        \item[Military] Dane dotyczące wydatków wojskowych z Międzynarodowego Instytutu Badań nad Pokojem w Sztokholmie pochodzą z definicji NATO, która obejmuje wszystkie bieżące i kapitałowe wydatki na siły zbrojne, w tym siły pokojowe.
+        Wartości mniejsze niż 0.01\% zostały odrzucone w celu dostosowania skali logarytmicznej.
+        \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i usługi zdrowotne konsumowane w każdym roku.
+        \item[Import] Import towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych otrzymanych z reszty świata.
+        Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i rządowe.
+        Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji oraz płatności transferowych.
+        \item[Export] Eksport towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych dostarczanych do reszty świata.
+    \end{enumerate}
+
 
     \section{Efekt końcowy}\label{sec:efekt-końcowy}
     Stworzony w projekcie system pozwoli na grupowanie państw na podstawie medialnych informacji zebranych w bazie GDELT.
@@ -902,19 +916,8 @@ singlelinecheck=off
 
     \subsection{Wyniki klasteryzacji w postaci tabelarycznej - dane ustandaryzowane}
     W tabelach od~\ref{tab:cl0std} do~\ref{tab:cl9std} przedstawione zostały wyniki grupowania ustandaryzowanych próbek.
-    Dla ułatwienia interpretacji wyników grupowania razem z nazwami krajów zostały dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
-    Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0~\cite{wblicense}, przedstawiają sytuację w 2015 roku.
-    \begin{enumerate}
-        \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o wszelkie podatki od produktów i pomniejszona o wszelkie dotacje nieuwzględnione w wartości produktów.
-        \item[Education] Wydatki sektora instytucji rządowych i samorządowych na edukację są wyrażone jako procent PKB.
-        \item[Military] Dane dotyczące wydatków wojskowych z Międzynarodowego Instytutu Badań nad Pokojem w Sztokholmie pochodzą z definicji NATO, która obejmuje wszystkie bieżące i kapitałowe wydatki na siły zbrojne, w tym siły pokojowe.
-        Wartości mniejsze niż 0.01\% zostały odrzucone w celu dostosowania skali logarytmicznej.
-        \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i usługi zdrowotne konsumowane w każdym roku.
-        \item[Import] Import towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych otrzymanych z reszty świata.
-        Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i rządowe.
-        Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji oraz płatności transferowych.
-        \item[Export] Eksport towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych dostarczanych do reszty świata.
-    \end{enumerate}
+
+    Zgodnie z założeniami z części~\ref{sec:założenia-i-wymagania}, dla ułatwienia interpretacji wyników grupowania, zostały dodane informacje zewnętrzne o PKB i wydatkach publicznych.
     Dodatkowo dokonano kolorowania pól z informacjami o krajach.
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
     Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony (bardzo niskie), pomarańczowy (niskie), żółty (średnie), jasnozielony (wysokie), zielony (bardzo wysokie).
@@ -1202,7 +1205,9 @@ singlelinecheck=off
 
 
     \section{Wnioski}\label{sec:wnioski}
-    \ldots
+    Przeprowadzona analiza danych ze zbioru GDELT pozwoliła na wybranie takiego wektora cech który umożliwił skuteczny podział państw - aktorów - na grupy.
+    Udało się wykazać związek powstałych klastrów z rzeczywistymi cechami państw.
+    Najwyraźniejszymi
 
 
     \section{Dalsze kierunki rozwoju}\label{sec:dalsze-kierunki-rozwoju}
