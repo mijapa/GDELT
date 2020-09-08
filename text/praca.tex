@@ -135,6 +135,8 @@ singlelinecheck=off
 
     \section{Założenia i wymagania}\label{sec:założenia-i-wymagania}
     W analizie wykorzystany zostanie głównie zbiór danych GDELT 2.0 od początku 2015 roku do kwietnia 2020.
+    W pierwszej kolejności zostaną przeprowadzone wstępne analizy które pozwolą lepiej zrozumieć specyfikę danych.
+    Następnie zostanie przeprowadzona klasteryzacja.
     Do grupowania państw w klastry zostanie wykorzystany wektor cech z bazy GDELT oraz algorytm klastrowania k-średnich.
     Wektor będzie składał się z:
     \begin{enumerate}
@@ -205,7 +207,7 @@ singlelinecheck=off
     Jako pierwszą analizę wykonano badanie popularności Polski w zbiorze danych GDELT. Na wszystkich trzech wykresach obserwujemy znaczny wzrost liczby zdarzeń w 2015 roku. Może być to związane z uruchomieniem w GDELT automatycznego tłumaczenia artykułów i co za tym idzie zwiększeniem liczby źródeł danych.
 
     \paragraph{Polska jako Aktor 1}
-    Wykres~\ref{fig:PLactor1} przedstawia popularność Polski jako aktora 1 skumulowaną dla poszczególnych lat.
+    Wykres~\ref{fig:PLactor1} przedstawia popularność Polski, jako aktora 1, jako ilość zdarzeń w poszczególnych latach.
     W roku 2016 obserwujemy szczyt popularności na poziomie około 150 tysięcy zdarzeń.
     \begin{figure}[!htp]
         \centering
@@ -218,10 +220,14 @@ singlelinecheck=off
     \end{figure}
 
     \paragraph{Polska jako Aktor 2}
-    Wykres~\ref{fig:PLactor2} przedstawia popularność Polski jako aktora 2 skumulowaną dla poszczególnych lat. Kształt wykresu jest bardzo zbliżony do~\ref{fig:PLactor1} jednak szczyt popularności jest niższy - na poziomie około 130 tysięcy zdarzeń.
+    Wykres~\ref{fig:PLactor2} przedstawia popularność Polski, jako aktora 2, jako ilość zdarzeń w poszczególnych latach.
+    Kształt wykresu jest bardzo zbliżony do~\ref{fig:PLactor1} jednak szczyt popularności jest niższy - na poziomie około 130 tysięcy zdarzeń.
 
     \paragraph{Polska jako miejsce wydarzeń}
-    Wykres~\ref{fig:PLlocation} przedstawia popularność Polski jako miejsca wydarzeń skumulowaną dla poszczególnych lat. Ponownie kształt wykresu jest zbliżony do~\ref{fig:PLactor1}. W tym przypadku szczyt popularności jest wyższy - na poziomie około 210 tysięcy zdarzeń.
+    Wykres~\ref{fig:PLlocation} przedstawia popularność Polski jako miejsca wydarzeń w poszczególnych latach.
+    Ponownie kształt wykresu jest zbliżony do~\ref{fig:PLactor1}.
+    W tym przypadku szczyt popularności jest wyższy - na poziomie około 210 tysięcy zdarzeń.
+
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/PL/PLlocation.png}
@@ -245,7 +251,7 @@ singlelinecheck=off
     W czołówce pojawiają sie też kraje znaczące politycznie oraz silnie skonfliktowane.
 
     \paragraph{Liczba zdarzeń w czasie}
-    Wykres~\ref{fig:GLOBALactor1inTime} przedstawia liczbę zdarzeń dla top 5 krajów skumulowaną dla poszczególnych lat.
+    Wykres~\ref{fig:GLOBALactor1inTime} przedstawia liczbę zdarzeń dla top 5 krajów w poszczególnych latach.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/GLOBAL/Actor1inTIME.png}
@@ -263,7 +269,7 @@ singlelinecheck=off
     \end{figure}
 
     \paragraph{Popularność czterokodów zdarzeń w czasie}
-    Wykres~\ref{fig:GLOBALQCperc} przedstawia liczbę zdarzeń dla czterokodów zdarzeń skumulowaną dla poszczególnych lat.
+    Wykres~\ref{fig:GLOBALQCperc} przedstawia liczbę zdarzeń dla czterokodów w poszczególnych latach.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/GLOBAL/QCperc.png}
@@ -281,7 +287,7 @@ singlelinecheck=off
     \end{figure}
 
     \paragraph{Popularność bazowych kodów zdarzeń w czasie}
-    Wykres~\ref{fig:GLOBALEBCperc} przedstawia liczbę zdarzeń dla top 20 bazowych kodów zdarzeń skumulowaną dla poszczególnych lat.
+    Wykres~\ref{fig:GLOBALEBCperc} przedstawia liczbę zdarzeń dla top 20 bazowych kodów zdarzeń w poszczególnych latach.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/GLOBAL/EBCperc.png}
@@ -299,7 +305,7 @@ singlelinecheck=off
     \end{figure}
 
     \paragraph{Popularność podstawowych kodów zdarzeń w czasie}
-    Wykres~\ref{fig:GLOBALERCperc} przedstawia liczbę zdarzeń dla top 20 podstawowych kodów zdarzeń skumulowaną dla poszczególnych lat.
+    Wykres~\ref{fig:GLOBALERCperc} przedstawia liczbę zdarzeń dla top 20 podstawowych kodów zdarzeń w poszczególnych latach.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/GLOBAL/ERCperc.png}
