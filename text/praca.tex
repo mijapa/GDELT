@@ -110,7 +110,7 @@ singlelinecheck=off
     // artykuły analizujące, kto cytował, jakie analizy
 
 
-    \chapter{Koncepcja}
+    \chapter{Koncepcja}\label{ch:koncepcja}
 
     W tym rozdziale zostały opisane założenia i wymagania oraz efekt końcowy projektu.
 
@@ -118,6 +118,20 @@ singlelinecheck=off
     \section{Założenia i wymagania}
     W analizie wykorzystany zostanie głównie zbiór danych GDELT 2.0 od początku 2015 roku do kwietnia 2020.
     Do grupowania państw w klastry zostanie wykorzystany wektor cech z bazy GDELT oraz algorytm klastrowania k-średnich.
+    Wektor będzie składał się z:
+    \begin{enumerate}
+        \item[•] liczby zdarzeń dla których kraj jest aktorem 1 (events),
+        \item[•] liczby wzmianek (numMentions) - całkowitej liczba wzmianek o tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone,
+        \item[•] stosunku liczby zdarzeń material conflict do material cooperation z quad description (materialConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
+        \item[•] stosunku liczby zdarzeń verbal conflict do verbal cooperation z quad description (verbalConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
+        \item[•] średniego średniego tonu (avgAvgTone) - średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone. Waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni).
+        \item[•] średniej miary Goldsteina (avgGoldstein) - skala Goldsteina przypisuje wynik liczbowy od -10 do +10, wychwytując teoretyczny potencjalny wpływ, jaki rodzaj zdarzenia będzie miał na stabilność kraju,
+        \item[•] liczby zdarzeń Fight (fightCount)
+        \item[•] liczby zdarzeń Express intent to cooperate (expressCount)
+    \end{enumerate}
+    Dane wykorzystane w tym doświadczeniu pochodzą ze stycznia 2020 roku.
+    Przed dokonaniem klasteryzacji odrzucone zostaną wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
+    Klasteryzacja zostanie przeprowadzona dwukrotnie, za drugim razem na danych ustandaryzowanych przy pomocy modułu StandardScaler~\cite{standardScaler}.
 
 
     \section{Efekt końcowy}
@@ -673,25 +687,16 @@ singlelinecheck=off
     \end{figure}
 
 
-    \chapter[Grupowanie państw]{Grupowanie państw o~podobnych cechach i~porównanie z danymi zewnętrznymi}
+    \chapter[Grupowanie państw]{Grupowanie państw o~podobnych cechach oraz~porównanie z danymi zewnętrznymi}
 
-    Do przeprowadzenia grupowania krajów wykorzystany został wektor składający się z:
-    \begin{enumerate}
-        \item[•] liczby zdarzeń dla których kraj jest aktorem 1 (events),
-        \item[•] liczby wzmianek (numMentions) - całkowitej liczba wzmianek o tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone,
-        \item[•] stosunku liczby zdarzeń material conflict do material cooperation z quad description (materialConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
-        \item[•] stosunku liczby zdarzeń verbal conflict do verbal cooperation z quad description (verbalConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
-        \item[•] średniego średniego tonu (avgAvgTone) - średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone. Waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni).
-        \item[•] średniej miary Goldsteina (avgGoldstein) - skala Goldsteina przypisuje wynik liczbowy od -10 do +10, wychwytując teoretyczny potencjalny wpływ, jaki rodzaj zdarzenia będzie miał na stabilność kraju,
-        \item[•] liczby zdarzeń Fight (fightCount)
-        \item[•] liczby zdarzeń Express intent to cooperate (expressCount)
-    \end{enumerate}
-    Dane wykorzystane w tym doświadczeniu pochodzą ze stycznia 2020 roku.
-    Przed dokonaniem klasteryzacji odrzucone zostały wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
-    Klasteryzacja została przeprowadzona dwukrotnie, za drugim razem na danych ustandaryzowanych przy pomocy modułu StandardScaler~\cite{standardScaler}.
+    W tym rozdziale zostały opisane wyniki grupowania państw, z wykorzystaniem metody k-średnich, w oparciu o podobne cechy z bazy danych GDELT.
+    Dane zostały porównane z danymi zewnętrznymi.
+    W części~\ref{sec:dane-niestandaryzowane} przedstawione zostały wyniki grupowania danych niestandaryzowanych.
+    Część~\ref{sec:dane-ustandaryzowane} zawiera wyniki grupowania danych ustandaryzowanych przy pomocy StandardScaler'a.
+    Do grupowania krajów został wykorzystany wektor cech opisany w rozdziale~\ref{ch:koncepcja}.
 
 
-    \section{Dane niestandaryzowane}
+    \section{Dane niestandaryzowane}\label{sec:dane-niestandaryzowane}
     W pierwszej kolejności zostaną przedstawione wyniki grupowania na danych niestandaryzowanych.
 
     Wykres~\ref{fig:clust10} przedstawia mapę z naniesionymi wynikami klasteryzacji.
@@ -707,7 +712,7 @@ singlelinecheck=off
     Szczegółowe wyniki grupowania znajdują się w dodatku~\ref{ch:dodatek_niestd}.
 
 
-    \section{Dane ustandaryzowane}
+    \section{Dane ustandaryzowane}\label{sec:dane-ustandaryzowane}
     Standrd Scaler standaryzuje cechy poprzez usunięcie średniej i skalowanie do wariancji jednostkowej.
     Standardowy wynik próbki x jest obliczany jako:
     z = (x - u) / s
