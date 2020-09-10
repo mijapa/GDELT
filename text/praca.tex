@@ -43,12 +43,12 @@ singlelinecheck=off
     \begin{titlepage}
         \centering
         \includegraphics[width=\linewidth]{fig/AGH.jpg}
-        \center{\scshape WYDZIAŁ INFORMATYKI, ELEKTRONIKI\\ I TELEKOMUNIKACJI\\
+        \center{\scshape WYDZIAŁ INFORMATYKI, ELEKTRONIKI\\ i~TELEKOMUNIKACJI\\
         Kierunek Informatyka}
         \vspace{0.03\textheight}
         \center{\scshape Michał Patyk}
         \bigskip
-        \center{\LARGE\bfseries Analiza danych i wzorców dotyczących wydarzeń politycznych na podstawie informacji zgromadzonych w projekcie GDELT}
+        \center{\LARGE\bfseries Analiza danych i~wzorców dotyczących wydarzeń politycznych na podstawie informacji zgromadzonych w projekcie GDELT}
         \center{(pracownia problemowa)}
         \vspace{0.2\textheight}
         \par
@@ -70,7 +70,7 @@ singlelinecheck=off
     W rozdziale~\ref{ch:koncepcja} przedstawiona została koncepcja pracy.
     Rozdział~\ref{ch:realizacja} dotyczy realizacji zadania.
     W rozdziale~\ref{ch:wstępna-analiza-danych} wykonana została wstępna analiza danych.
-    Rozdział~\ref{ch:grupowanie-państw-opodobnych-cechach-orazporównanie-z-danymi-zewnętrznymi} opisuje grupowanie państw o podobnych cechach.
+    Rozdział~\ref{ch:grupowanie-państw-opodobnych-cechach-orazporównanie-z-danymi-zewnętrznymi} opisuje grupowanie państw o~podobnych cechach.
     W ostatnim rozdziale~\ref{ch:podsumowanie} dokonano podsumowania przeprowadzonych analiz.
     Dodatek~\ref{ch:dodatek_niestd} zawiera szczegółowe wyniki grupowania dla danych niestandaryzowanych.
     Na końcu dokumentu dołączony został spis bibliograficzny.
@@ -78,17 +78,17 @@ singlelinecheck=off
 
     \section{Motywacja}\label{sec:motywacja}
     Projekt GDELT monitoruje doniesienia medialne ze wszystkich krajów, w ponad 100 językach, każdego dnia.
-    Wszystkie wydarzenia opisane są przez aktorów, lokalizacje i charakter aktywności, co jest specyfikowane poprzez zestaw atrybutów.
+    Wszystkie wydarzenia opisane są przez aktorów, lokalizacje i~charakter aktywności, co jest specyfikowane poprzez zestaw atrybutów.
     Analiza atrybutów może umożliwić lepsze zrozumienie specyfiki krajów.
     Wykrycie wzorców może pozwolić na automatyczną reakcję na zdarzenia, prognozowanie oraz wykrywanie zdarzeń nietypowych.
 
 
     \section{Cele pracy}\label{sec:cele-pracy}
-    Celem niniejszej pracy jest analiza wydarzeń politycznych oraz poszukiwanie występujących w nich wzorców w oparciu o dane projektu GDELT.
+    Celem niniejszej pracy jest analiza wydarzeń politycznych oraz poszukiwanie występujących w nich wzorców w oparciu o~dane projektu GDELT.
     Zdarzenia są opisane przez aktorów.
     Wybrani zostaną aktorzy - kraje.
-    Następnie kraje zostaną pogrupowane z wykorzystaniem metody k-średnich w oparciu o wektor cech wybranych z opisu zdarzeń.
-    Klastrowanie zostanie przeprowadzone przed i po standaryzacji.
+    Następnie kraje zostaną pogrupowane z wykorzystaniem metody k-średnich w oparciu o~wektor cech wybranych z opisu zdarzeń.
+    Klastrowanie zostanie przeprowadzone przed i~po standaryzacji.
     Klastry zostaną porównane z danymi zewnętrznymi.
     Grupowanie krajów na podstawie atrybutów z bazy danych GDELT pozwoli na wykazanie związku z rzeczywistymi cechami państw.
 
@@ -100,19 +100,19 @@ singlelinecheck=off
 
 
     \section{GDELT}\label{sec:gdelt}
-    GDELT - Global Database of Events, Language, and Tone - to największa, najbardziej wszechstronna i otwarta baza danych jaka powstała.
+    GDELT - Global Database of Events, Language, and Tone - to największa, najbardziej wszechstronna i~otwarta baza danych jaka powstała.
     Wczesne poszukiwania prowadzące do stworzenia GDELT zostały opisane przez Philipa Schrodta w dokumencie~\cite{Schrodt2010} w styczniu 2010 r.
     Zbiór danych jest dostępny na stronie Projektu ~\cite{gdelt} oraz na platformie Google Cloud gdzie można z niego korzystać przez Google BigQuery~\cite{BigQuery2014}.
-    GDELT używa kodowania obserwacji konfliktów i mediacji (CAMEO)~\cite{GDELTDocumentation} do rejestrowania zdarzeń.
+    GDELT używa kodowania obserwacji konfliktów i~mediacji (CAMEO)~\cite{GDELTDocumentation} do rejestrowania zdarzeń.
     W zbiorze znajdują się dane od 1979 roku.
-    Kolejne porcje zdarzeń i ich klasyfikacja generowane sa na bieżąco każdego dnia.
+    Kolejne porcje zdarzeń i~ich klasyfikacja generowane sa na bieżąco każdego dnia.
 
 
     \section{CAMEO}\label{sec:cameo}
     CAMEO - Conflict and Mediation Event Observations - jest schematem kodowania zdarzeń.
     Został stworzony w Katedrze Nauk Politycznych Pennsylvania State University.
     Jego początki sięgają roku 2000.
-    Został zaprojektowany z myślą o automatycznym kodowaniu i szczegółowym kodowaniu aktorów.
+    Został zaprojektowany z myślą o~automatycznym kodowaniu i~szczegółowym kodowaniu aktorów.
 
     \subsection{Zdarzenia}
     Kody zdarzeń są ujednolicone pod względem kolejności numerycznej głównych kategorii.
@@ -120,7 +120,7 @@ singlelinecheck=off
 
     \subsection{Aktorzy}
     Kody aktorów składają sie z trzech znaków.
-    Elementy kodu są podzielone na szerokie kategorie, takie jak podmioty państwowe, role, regiony i grupy etniczne aktorów.
+    Elementy kodu są podzielone na szerokie kategorie, takie jak podmioty państwowe, role, regiony i~grupy etniczne aktorów.
 
 
     \section{Przegląd istniejących analiz} \label{sec:przeglad}
@@ -129,11 +129,11 @@ singlelinecheck=off
 
     \chapter{Koncepcja}\label{ch:koncepcja}
 
-    W tym rozdziale w części~\ref{sec:założenia-i-wymagania} zostały przedstawione założenia i wymagania.
+    W tym rozdziale w części~\ref{sec:założenia-i-wymagania} zostały przedstawione założenia i~wymagania.
     W części~\ref{sec:efekt-końcowy} został opisany efekt końcowy projektu.
 
 
-    \section{Założenia i wymagania}\label{sec:założenia-i-wymagania}
+    \section{Założenia i~wymagania}\label{sec:założenia-i-wymagania}
     W analizie wykorzystany zostanie głównie zbiór danych GDELT 2.0 od początku 2015 roku do kwietnia 2020.
     W pierwszej kolejności zostaną przeprowadzone wstępne analizy które pozwolą lepiej zrozumieć specyfikę danych.
     Następnie zostanie przeprowadzona klasteryzacja.
@@ -141,10 +141,10 @@ singlelinecheck=off
     Wektor będzie składał się z:
     \begin{enumerate}
         \item[•] liczby zdarzeń dla których kraj jest aktorem 1 (events),
-        \item[•] liczby wzmianek (numMentions) - całkowitej liczba wzmianek o tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone,
+        \item[•] liczby wzmianek (numMentions) - całkowitej liczba wzmianek o~tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone,
         \item[•] stosunku liczby zdarzeń material conflict do material cooperation z quad description (materialConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
         \item[•] stosunku liczby zdarzeń verbal conflict do verbal cooperation z quad description (verbalConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
-        \item[•] średniego średniego tonu (avgAvgTone) - średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone. Waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni).
+        \item[•] średniego średniego tonu (avgAvgTone) - średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o~tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone. Waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni).
         \item[•] średniej miary Goldsteina (avgGoldstein) - skala Goldsteina przypisuje wynik liczbowy od -10 do +10, wychwytując teoretyczny potencjalny wpływ, jaki rodzaj zdarzenia będzie miał na stabilność kraju,
         \item[•] liczby zdarzeń Fight (fightCount)
         \item[•] liczby zdarzeń Express intent to cooperate (expressCount)
@@ -153,30 +153,30 @@ singlelinecheck=off
     Przed dokonaniem klasteryzacji odrzucone zostaną wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
     Klasteryzacja zostanie przeprowadzona dwukrotnie, za drugim razem na danych ustandaryzowanych przy pomocy modułu StandardScaler~\cite{standardScaler}.
 
-    Dla ułatwienia interpretacji wyników grupowania zostaną dodane informacje o PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
+    Dla ułatwienia interpretacji wyników grupowania zostaną dodane informacje o~PKB, wydatkach na zdrowie, zbrojenia, edukację, import oraz eksport (jako procent PKB).
     Dodatkowe dane pochodzą z bazy Banku Światowego~\cite{worldbank}, są na licencji CC BY-4.0~\cite{wblicense}, przedstawiają sytuację w 2015 roku.
     \begin{enumerate}
-        \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o wszelkie podatki od produktów i pomniejszona o wszelkie dotacje nieuwzględnione w wartości produktów.
-        \item[Education] Wydatki sektora instytucji rządowych i samorządowych na edukację są wyrażone jako procent PKB.
-        \item[Military] Dane dotyczące wydatków wojskowych z Międzynarodowego Instytutu Badań nad Pokojem w Sztokholmie pochodzą z definicji NATO, która obejmuje wszystkie bieżące i kapitałowe wydatki na siły zbrojne, w tym siły pokojowe.
+        \item[GDP] PKB to suma wartości dodanej brutto, w dolarach, wszystkich producentów będących rezydentami w gospodarce powiększona o~wszelkie podatki od produktów i~pomniejszona o~wszelkie dotacje nieuwzględnione w wartości produktów.
+        \item[Education] Wydatki sektora instytucji rządowych i~samorządowych na edukację są wyrażone jako procent PKB.
+        \item[Military] Dane dotyczące wydatków wojskowych z Międzynarodowego Instytutu Badań nad Pokojem w Sztokholmie pochodzą z definicji NATO, która obejmuje wszystkie bieżące i~kapitałowe wydatki na siły zbrojne, w tym siły pokojowe.
         Wartości mniejsze niż 0.01\% zostały odrzucone w celu dostosowania skali logarytmicznej.
-        \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i usługi zdrowotne konsumowane w każdym roku.
-        \item[Import] Import towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych otrzymanych z reszty świata.
-        Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i rządowe.
-        Nie obejmuje kosztów związanych z zatrudnieniem i dochodów z inwestycji oraz płatności transferowych.
-        \item[Export] Eksport towarów i usług reprezentuje wartość wszystkich towarów i innych usług rynkowych dostarczanych do reszty świata.
+        \item[Health] Poziom bieżących wydatków na zdrowie wyrażony jako procent PKB. Szacunki bieżących wydatków na zdrowie obejmują towary i~usługi zdrowotne konsumowane w każdym roku.
+        \item[Import] Import towarów i~usług reprezentuje wartość wszystkich towarów i~innych usług rynkowych otrzymanych z reszty świata.
+        Obejmuje wartość towarów, frachtu, ubezpieczenia, transportu, podróży, tantiem, opłat licencyjnych i~innych usług, takich jak usługi komunikacyjne, budowlane, finansowe, informacyjne, biznesowe, osobiste i~rządowe.
+        Nie obejmuje kosztów związanych z zatrudnieniem i~dochodów z inwestycji oraz płatności transferowych.
+        \item[Export] Eksport towarów i~usług reprezentuje wartość wszystkich towarów i~innych usług rynkowych dostarczanych do reszty świata.
     \end{enumerate}
 
 
     \section{Efekt końcowy}\label{sec:efekt-końcowy}
     Stworzony w projekcie system pozwoli na grupowanie państw na podstawie medialnych informacji zebranych w bazie GDELT.
     Przeprowadzone grupowanie państw w klastry pozwoli na uzyskanie uproszczonego, zagregowanego obrazu sytuacji geopolitycznej.
-    Planowanym efektem końcowym pracy będzie wykazanie, że na bazie cech z bazy danych GDELT możemy skategoryzować państwa o rzeczywistych cechach takich jak PKB, wydatki na zbrojenia, edukację i ochronę zdrowia.
+    Planowanym efektem końcowym pracy będzie wykazanie, że na bazie cech z bazy danych GDELT możemy skategoryzować państwa o~rzeczywistych cechach takich jak PKB, wydatki na zbrojenia, edukację i~ochronę zdrowia.
 
 
     \chapter{Realizacja}\label{ch:realizacja}
 
-    W tym rozdziale w części~\ref{sec:wykorzystane-narzędzia} opisane zostały metody i narzędzia wykorzystane podczas realizacji projektu.
+    W tym rozdziale w części~\ref{sec:wykorzystane-narzędzia} opisane zostały metody i~narzędzia wykorzystane podczas realizacji projektu.
     W części~\ref{sec:plan-pracy} przedstawiony został plan pracy.
     Część~\ref{sec:organizacja-pracy} prezentuje organizację pracy nad zadaniem.
 
@@ -196,9 +196,9 @@ singlelinecheck=off
     Przy tworzeniu projektu wykorzystany został język programowania Python.
     Jest to język wysokiego poziomu ogólnego przeznaczenia.
     Wraz z biblioteka Pandas jest często stosowany w zagadnieniach analizy danych oraz data miningu.
-    Pandas jest łatwym w użyciu narzędziem open source które oferuje w szczególności struktury danych i operacje do manipulacji tabelami numerycznymi.
+    Pandas jest łatwym w użyciu narzędziem open source które oferuje w szczególności struktury danych i~operacje do manipulacji tabelami numerycznymi.
     Głównym narzędziem używanym do programowania było zintegrowane środowisko programistyczne PyCharm firmy JetBrains.
-    Pozwala ono na wygodną edycję i analizę kodu źródłowego.
+    Pozwala ono na wygodną edycję i~analizę kodu źródłowego.
     Internetowe interaktywne środowisko obliczeniowe Notebook Jupyter pozwoliło na tworzenie dokumentów zawierających kod wraz z wizualizacjami.
     Wykorzystanie hurtowni danych Google BigQuery pozwoliło na szybką, skalowalną analizę dużego zbioru danych jakim jest GDELT.
     BigQuery jest oprogramowaniem bezserwerowym, które obsługuje zapytania w języku ANSI SQL.
@@ -208,8 +208,8 @@ singlelinecheck=off
 
     \section{Plan pracy}\label{sec:plan-pracy}
 
-    W pierwszej kolejności przeprowadzona zostanie wstępna analiza danych, która pozwoli na zorientowanie w jakim stopniu poszczególne cechy zdarzeń z bazy GDELT odzwierciedlają rzeczywiste zdarzenia i relacje między krajami.
-    Następnie przeprowadzone zostanie grupowanie państw metodą k-średnich w oparciu o wybrane cechy zdarzeń.
+    W pierwszej kolejności przeprowadzona zostanie wstępna analiza danych, która pozwoli na zorientowanie w jakim stopniu poszczególne cechy zdarzeń z bazy GDELT odzwierciedlają rzeczywiste zdarzenia i~relacje między krajami.
+    Następnie przeprowadzone zostanie grupowanie państw metodą k-średnich w oparciu o~wybrane cechy zdarzeń.
 
 
     \section{Organizacja pracy}\label{sec:organizacja-pracy}
@@ -222,7 +222,7 @@ singlelinecheck=off
         \label{fig:organizacjia}
     \end{figure}
 
-    Najpierw w hurtowni danych BigQuery tworzone będą zapytania do bazy danych GDELT pozwalające na agregację, filtrowanie i grupowanie danych.
+    Najpierw w hurtowni danych BigQuery tworzone będą zapytania do bazy danych GDELT pozwalające na agregację, filtrowanie i~grupowanie danych.
     Poniżej przykład zapytania.
 
     \begin{verbatim}
@@ -243,7 +243,7 @@ singlelinecheck=off
     Następnie w środowisku programistycznym PyCharm dla poszczególnych zagadnień tworzone będą notatniki jupyter łączące kod języka python z wizualizacjami.
     W notatnikach, zapisane wcześniej na dysku dane, będą importowane, a następnie grupowane tak aby na pojedynczym wykresie zamieści możliwie dużo informacji.
     Przedostatnim etapem będzie selekcja najistotniejszych danych w celu poprawy czytelności wykresów.
-    Na końcu tworzone będą i zapisywane do plików wizualizacje danych.
+    Na końcu tworzone będą i~zapisywane do plików wizualizacje danych.
 
 
     \chapter{Wstępna analiza danych}\label{ch:wstępna-analiza-danych}
@@ -255,7 +255,7 @@ singlelinecheck=off
 
 
     \section{Popularność Polski w zbiorze danych GDELT}\label{sec:popularność-polski-w-zbiorze-danych-gdelt}
-    Jako pierwszą analizę wykonano badanie popularności Polski w zbiorze danych GDELT. Na wszystkich trzech wykresach obserwujemy znaczny wzrost liczby zdarzeń w 2015 roku. Może być to związane z uruchomieniem w GDELT automatycznego tłumaczenia artykułów i co za tym idzie zwiększeniem liczby źródeł danych.
+    Jako pierwszą analizę wykonano badanie popularności Polski w zbiorze danych GDELT. Na wszystkich trzech wykresach obserwujemy znaczny wzrost liczby zdarzeń w 2015 roku. Może być to związane z uruchomieniem w GDELT automatycznego tłumaczenia artykułów i~co za tym idzie zwiększeniem liczby źródeł danych.
 
     \paragraph{Polska jako Aktor 1}
     Wykres~\ref{fig:PLactor1} przedstawia popularność Polski, jako aktora 1, jako ilość zdarzeń w poszczególnych latach.
@@ -297,7 +297,7 @@ singlelinecheck=off
         \caption{Liczba zdarzeń dla poszczególnych krajów od 2015 roku. (źródło: opracowanie własne)}
         \label{fig:GLOBALactor1}
     \end{figure}
-    Niekwestionowanym liderem pod względem liczby zdarzeń są Stany Zjednoczone. Dystansują one pozostałe kraje o prawie rząd wielkości.
+    Niekwestionowanym liderem pod względem liczby zdarzeń są Stany Zjednoczone. Dystansują one pozostałe kraje o~prawie rząd wielkości.
     Kraje anglosaskie są szczególnie mocno reprezentowane.
     W czołówce pojawiają sie też kraje znaczące politycznie oraz silnie skonfliktowane.
 
@@ -442,40 +442,40 @@ singlelinecheck=off
 
     \paragraph{Podstawowe kody zdarzeń między Polską a wybranymi krajami}
 
-    Wykres~\ref{fig:PLDEUERC} przedstawia liczbę zdarzeń z Polską i Niemcami dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:PLDEUERC} przedstawia liczbę zdarzeń z Polską i~Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/PL/POLDEUERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Polska i Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Polska i~Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:PLDEUERC}
     \end{figure}
     W analizowanym okresie dominuje kod podstawowy \textit{CONSULT}, który tylko w styczniu 2020 roku jest wyprzedzany przez od \textit{MAKE PUBLIC STATEMENT}.
-    Pozostałe kody utrzymują się na niższym poziomie i podlegają dynamicznym zmianom.
+    Pozostałe kody utrzymują się na niższym poziomie i~podlegają dynamicznym zmianom.
 
-    Wykres~\ref{fig:PLFRAERC} przedstawia liczbę zdarzeń z Polską i Francją dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:PLFRAERC} przedstawia liczbę zdarzeń z Polską i~Francją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/PL/POLFRAERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Polską i Francją dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Polską i~Francją dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:PLFRAERC}
     \end{figure}
-    Tak jak w przypadku wykresu~\ref{fig:PLDEUERC} dla Polski i Niemiec, na pierwszym miejscu utrzymuje się kod podstawowy \textit{CONSULT}.
-    Pozostałe kody są mniej popularne i podlegają ciągłym zmianom.
+    Tak jak w przypadku wykresu~\ref{fig:PLDEUERC} dla Polski i~Niemiec, na pierwszym miejscu utrzymuje się kod podstawowy \textit{CONSULT}.
+    Pozostałe kody są mniej popularne i~podlegają ciągłym zmianom.
 
-    Wykres~\ref{fig:PLGBRERC} przedstawia liczbę zdarzeń z Polską i Wielką Brytanią dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:PLGBRERC} przedstawia liczbę zdarzeń z Polską i~Wielką Brytanią dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/PL/POLGBRERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Polską i Wielka Brytanią dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Polską i~Wielka Brytanią dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:PLGBRERC}
     \end{figure}
     Podobnie jak na poprzednich wykresach, dominują zdarzenia \textit{CONSULT}.
 
-    Wykres~\ref{fig:PLRUSERC} przedstawia liczbę zdarzeń z Polską i Rosją dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:PLRUSERC} przedstawia liczbę zdarzeń z Polską i~Rosją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/PL/POLRUSERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Polską i Rosją dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Polską i~Rosją dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:PLRUSERC}
     \end{figure}
     Ponownie dominują zdarzenia \textit{CONSULT} jednak są zbliżone do pozostałych.
@@ -493,7 +493,7 @@ singlelinecheck=off
         \label{fig:DEUpair}
     \end{figure}
     Obserwujemy prawie dwukrotnie większą ilość zdarzeń w których parą dla Niemiec są one same, od następnych w kolejności Stanów Zjednoczonych.
-    Często występującą parą w zdarzeniach są też Francja i Rosja.
+    Często występującą parą w zdarzeniach są też Francja i~Rosja.
 
     Wykres~\ref{fig:DEUpairPerc} przedstawia procentową liczbę zdarzeń dla Niemiec w których parą jest dany kraj w czasie.
     \begin{figure}[!htp]
@@ -539,26 +539,26 @@ singlelinecheck=off
 
     \paragraph{Podstawowe kody zdarzeń między Niemcami a wybranymi krajami}
 
-    Wykres~\ref{fig:DEUPOLERC} przedstawia liczbę zdarzeń z Niemcami i Polską dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:DEUPOLERC} przedstawia liczbę zdarzeń z Niemcami i~Polską dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/DEU/DEUPOLERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Niemcami i Polską dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Niemcami i~Polską dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUPOLERC}
     \end{figure}
     W całym analizowanym okresie dominują zdarzenia podstawowe \textit{CONSULT}.
     Obserwujemy też duża ilość zdarzeń podstawowych \textit{FIGHT}.
     Może być to spowodowane dużą ilością zdarzeń mających na celu upamiętnienie historycznych działań wojennych.
 
-    Wykres~\ref{fig:DEURUSERC} przedstawia liczbę zdarzeń z Niemcami i Rosją dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:DEURUSERC} przedstawia liczbę zdarzeń z Niemcami i~Rosją dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/DEU/DEURUSERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Niemcami i Rosją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Niemcami i~Rosją dla poszczególnych kodów podstawowych w czasie. (źródło: opracowanie własne)}
         \label{fig:DEURUSERC}
     \end{figure}
     Dominującym jest kod podstawowy \textit{CONSULT}.
-    Obserwujemy okresy wyraźnego zwiększenia ilości zdarzeń z kodem podstawowym \textit{DISAPPROVE} i w tym samym czasie zmniejszenia zdarzeń \textit{CONSULT}.
+    Obserwujemy okresy wyraźnego zwiększenia ilości zdarzeń z kodem podstawowym \textit{DISAPPROVE} i~w tym samym czasie zmniejszenia zdarzeń \textit{CONSULT}.
 
     \subsection{Rosja}
 
@@ -572,7 +572,7 @@ singlelinecheck=off
         \caption{Liczba zdarzeń z Rosją w których parą jest dany kraj od 2015 roku. (źródło: opracowanie własne)}
         \label{fig:RUSpair}
     \end{figure}
-    W porównaniu z wcześniej analizowanymi państwami gdzie drugi w kolejności kraj miał o połowę mniej zdarzeń, w przypadku Rosji zdarzeń jest tylko o 1/3 mniej.
+    W porównaniu z wcześniej analizowanymi państwami gdzie drugi w kolejności kraj miał o~połowę mniej zdarzeń, w przypadku Rosji zdarzeń jest tylko o~1/3 mniej.
     Najpopularniejszymi parami do zdarzeń dla Rosji, prócz niej samej, są Stany Zjednoczone Ameryki, Syria oraz Ukraina.
 
     Wykres~\ref{fig:RUSpairPerc} przedstawia procentową liczbę zdarzeń dla Rosji w których parą jest dany kraj w czasie.
@@ -619,21 +619,21 @@ singlelinecheck=off
 
     \paragraph{Podstawowe kody zdarzeń między Rosją a wybranymi krajami}
 
-    Wykres~\ref{fig:RUSPOLERC} przedstawia liczbę zdarzeń z Rosją i Polską dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:RUSPOLERC} przedstawia liczbę zdarzeń z Rosją i~Polską dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/RUS/RUSPOLERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Rosją i Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Rosją i~Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:RUSPOLERC}
     \end{figure}
-    W wydarzeniach w których uczestniczy Rosja i Polska obserwujemy dominację kodu podstawowego \textit{CONSULT}.
+    W wydarzeniach w których uczestniczy Rosja i~Polska obserwujemy dominację kodu podstawowego \textit{CONSULT}.
     Występują wyraźne okresy zwiększenia popularności kodów \textit{DISAPPROVE} oraz \textit{MAKE PUBLIC STATEMENT} przy jednoczesnym zmniejszeniu popularności kodu \textit{CONSULT}.
 
-    Wykres~\ref{fig:RUSRUSERC} przedstawia liczbę zdarzeń z Rosją i Niemcami dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:RUSRUSERC} przedstawia liczbę zdarzeń z Rosją i~Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/RUS/RUSDEUERCperc.png}
-        \caption{Procentowa liczba zdarzeń z Rosją i Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń z Rosją i~Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:RUSRUSERC}
     \end{figure}
     Popularność kodu podstawowego \textit{CONSULT} w analizowanym okresie oscyluje w okolicach 40\%, podczas gdy pozostałych kodów utrzymuje się w większości poniżej 20\%.
@@ -650,7 +650,7 @@ singlelinecheck=off
         \caption{Liczba zdarzeń ze Stanami Zjednoczonymi w których parą jest dany kraj od 2015 roku. (źródło: opracowanie własne)}
         \label{fig:USApair}
     \end{figure}
-    Liczba zdarzeń w których parą dla Stanów Zjednoczonych są one same jest o rząd wielkości większa od następnej w kolejności Rosji.
+    Liczba zdarzeń w których parą dla Stanów Zjednoczonych są one same jest o~rząd wielkości większa od następnej w kolejności Rosji.
     Stany Zjednoczone mają też dużo zdarzeń w których parą są Chiny, Wielka Brytania, Iran oraz Meksyk.
 
     Wykres~\ref{fig:USApairPerc} przedstawia procentową liczbę zdarzeń dla Stanów Zjednoczonych w których parą jest dany kraj w czasie.
@@ -698,21 +698,21 @@ singlelinecheck=off
 
     \paragraph{Podstawowe kody zdarzeń między Stanami Zjednoczonymi a wybranymi krajami}
 
-    Wykres~\ref{fig:USAPOLERC} przedstawia liczbę zdarzeń ze Stanami Zjednoczonymi i Polską dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:USAPOLERC} przedstawia liczbę zdarzeń ze Stanami Zjednoczonymi i~Polską dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/USA/USAPOLERCperc.png}
-        \caption{Procentowa liczba zdarzeń ze Stanami Zjednoczonymi i Polską dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń ze Stanami Zjednoczonymi i~Polską dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:USAPOLERC}
     \end{figure}
     Obserwujemy dominację zdarzeń z kodem podstawowym \textit{CONSULT} z popularnością oscylującą około 40\%.
     Pozostałe kody w analizowanym okresie utrzymują się głównie poniżej 20\% wystąpień.
 
-    Wykres~\ref{fig:USADEUERC} przedstawia liczbę zdarzeń ze Stanami Zjednoczonymi i Niemcami dla poszczególnych kodów podstawowych w czasie.
+    Wykres~\ref{fig:USADEUERC} przedstawia liczbę zdarzeń ze Stanami Zjednoczonymi i~Niemcami dla poszczególnych kodów podstawowych w czasie.
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/USA/USADEUERCperc.png}
-        \caption{Procentowa liczba zdarzeń ze Stanami Zjednoczonymi i Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń ze Stanami Zjednoczonymi i~Niemcami dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:USADEUERC}
     \end{figure}
     W porównaniu z poprzednim wykresem~\ref{fig:USAPOLERC} obserwujemy jeszcze większą dominację zdarzeń z kodem podstawowym \textit{CONSULT}.
@@ -722,7 +722,7 @@ singlelinecheck=off
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/USA/USARUSERCperc.png}
-        \caption{Procentowa liczba zdarzeń ze Stanami Zjednoczonymi i Rosją dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
+        \caption{Procentowa liczba zdarzeń ze Stanami Zjednoczonymi i~Rosją dla poszczególnych kodów podstawowych w czasie - top 10. (źródło: opracowanie własne)}
         \label{fig:USARUSERC}
     \end{figure}
     Obserwujemy mniejszy niż na poprzednich wykresach~\ref{fig:USAPOLERC},~\ref{fig:USADEUERC} odstęp pomiędzy popularnością zdarzeń z kodem \textit{CONSULT} a następnymi w kolejności \textit{MAKE PUBLIC STATEMENT} oraz \textit{DISAPPROVE}.
@@ -781,37 +781,37 @@ singlelinecheck=off
 
     \paragraph{Polska - Niemcy - Polska}
 
-    Wykres~\ref{fig:POL-DEU-POL} przedstawia symetryczność siły połączenia Polski i Niemiec w czasie.
+    Wykres~\ref{fig:POL-DEU-POL} przedstawia symetryczność siły połączenia Polski i~Niemiec w czasie.
 
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-DEU-POL.png}
-        \caption{Symetryczność siły połączenia Polski i Niemiec w czasie. (źródło: opracowanie własne)}
+        \caption{Symetryczność siły połączenia Polski i~Niemiec w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-DEU-POL}
     \end{figure}
 
     \paragraph{Polska - Rosja - Polska}
 
-    Wykres~\ref{fig:POL-RUS-POL} przedstawia symetryczność siły połączenia Polski i Rosji w czasie.
+    Wykres~\ref{fig:POL-RUS-POL} przedstawia symetryczność siły połączenia Polski i~Rosji w czasie.
 
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-RUS-POL.png}
-        \caption{Symetryczność siły połączenia Polski i Rosji w czasie. (źródło: opracowanie własne)}
+        \caption{Symetryczność siły połączenia Polski i~Rosji w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-RUS-POL}
     \end{figure}
 
     \paragraph{Polska - Stany Zjednoczone - Polska}
 
-    Wykres~\ref{fig:POL-USA-POL} przedstawia symetryczność siły połączenia Polski i Stanów Zjednoczonych w czasie.
+    Wykres~\ref{fig:POL-USA-POL} przedstawia symetryczność siły połączenia Polski i~Stanów Zjednoczonych w czasie.
 
 
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-USA-POL.png}
-        \caption{Symetryczność siły połączenia Polski i Stanów Zjednoczonych w czasie. (źródło: opracowanie własne)}
+        \caption{Symetryczność siły połączenia Polski i~Stanów Zjednoczonych w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-USA-POL}
     \end{figure}
 
@@ -832,7 +832,7 @@ singlelinecheck=off
 
     \chapter[Grupowanie państw]{Grupowanie państw o~podobnych cechach oraz~porównanie z danymi zewnętrznymi}\label{ch:grupowanie-państw-opodobnych-cechach-orazporównanie-z-danymi-zewnętrznymi}
 
-    W tym rozdziale zostały opisane wyniki grupowania państw, z wykorzystaniem metody k-średnich, w oparciu o podobne cechy z bazy danych GDELT.
+    W tym rozdziale zostały opisane wyniki grupowania państw, z wykorzystaniem metody k-średnich, w oparciu o~podobne cechy z bazy danych GDELT.
     Dane zostały porównane z danymi zewnętrznymi.
     W części~\ref{sec:dane-niestandaryzowane} przedstawione zostały wyniki grupowania danych niestandaryzowanych.
     Część~\ref{sec:dane-ustandaryzowane} zawiera wyniki grupowania danych ustandaryzowanych przy pomocy StandardScaler'a.
@@ -856,7 +856,7 @@ singlelinecheck=off
 
 
     \section{Dane ustandaryzowane}\label{sec:dane-ustandaryzowane}
-    Standrd Scaler standaryzuje cechy poprzez usunięcie średniej i skalowanie do wariancji jednostkowej.
+    Standrd Scaler standaryzuje cechy poprzez usunięcie średniej i~skalowanie do wariancji jednostkowej.
     Standardowy wynik próbki x jest obliczany jako:
     z = (x - u) / s
     gdzie u jest średnią próbek, a s jest standardowym odchyleniem próbek.
@@ -947,7 +947,7 @@ singlelinecheck=off
     \end{figure}
 
     Na wykresie~\ref{fig:density_events} obserwujemy słabą separację klastrów.
-    Wyróżniają się klastry 7 oraz 8 których gęstości są spłaszczone i wydłużone.
+    Wyróżniają się klastry 7 oraz 8 których gęstości są spłaszczone i~wydłużone.
 
     \begin{figure}[!htp]
         \centering
@@ -975,7 +975,7 @@ singlelinecheck=off
         \label{fig:density_verbalconfcoop}
     \end{figure}
 
-    Na wykresie~\ref{fig:density_verbalconfcoop} zauważamy podobieństwo klastrów 1 i 9 oraz 3 i 7.
+    Na wykresie~\ref{fig:density_verbalconfcoop} zauważamy podobieństwo klastrów 1 i~9 oraz 3 i~7.
 
     \begin{figure}[!htp]
         \centering
@@ -984,7 +984,7 @@ singlelinecheck=off
         \label{fig:density_avgavgtone}
     \end{figure}
 
-    Na wykresie~\ref{fig:density_avgavgtone} wyróżnia się klaster 8 (największa gęstość) oraz klastry 7 i 8.
+    Na wykresie~\ref{fig:density_avgavgtone} wyróżnia się klaster 8 (największa gęstość) oraz klastry 7 i~8.
 
 
     \begin{figure}[!htp]
@@ -1014,13 +1014,13 @@ singlelinecheck=off
     \end{figure}
 
     Na wykresie~\ref{fig:density_expresscount}, podobnie jak na poprzednim, obserwujemy skupienie w pobliżu zera.
-    Wyróżniają się klastry 7 i 8, które są spłaszczone i wydłużone.
+    Wyróżniają się klastry 7 i~8, które są spłaszczone i~wydłużone.
 
     \subsection{Wyniki klasteryzacji w postaci tabelarycznej - dane ustandaryzowane}
     W tabelach od~\ref{tab:cl0std} do~\ref{tab:cl9std} przedstawione zostały wyniki grupowania ustandaryzowanych próbek.
 
-    Zgodnie z założeniami z części~\ref{sec:założenia-i-wymagania}, dla ułatwienia interpretacji wyników grupowania, zostały dodane informacje zewnętrzne o PKB i wydatkach publicznych.
-    Dodatkowo dokonano kolorowania pól z informacjami o krajach.
+    Zgodnie z założeniami z części~\ref{sec:założenia-i-wymagania}, dla ułatwienia interpretacji wyników grupowania, zostały dodane informacje zewnętrzne o~PKB i~wydatkach publicznych.
+    Dodatkowo dokonano kolorowania pól z informacjami o~krajach.
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
     Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony (bardzo niskie), pomarańczowy (niskie), żółty (średnie), jasnozielony (wysokie), zielony (bardzo wysokie).
     W tabelach od~\ref{tab:cl1stdcount} do~\ref{tab:cl9stdcount} została przedstawiona procentowa ilość państw w poszczególnych przedziałach w obrębie klastrów.
@@ -1043,7 +1043,7 @@ singlelinecheck=off
 
     Klaster 0 w tabeli~\ref{tab:cl0std} zawiera 30 krajów.
     Przykłady ważniejszych państw w tym klastrze to: Estonia, Islandia, Luksemburg, Portugalia, Zjednoczone Emiraty Arabskie, Wietnam.
-    W tabeli~\ref{tab:cl0stdcount} obserwujemy, że w klastrze 0 przeważają (2/3) kraje z niskimi i średnimi wydatkami na opiekę zdrowotną (pomiędzy 3, a 7.9\% PKB).
+    W tabeli~\ref{tab:cl0stdcount} obserwujemy, że w klastrze 0 przeważają (2/3) kraje z niskimi i~średnimi wydatkami na opiekę zdrowotną (pomiędzy 3, a 7.9\% PKB).
 
     \begin{table}[!htp]
         \centering
@@ -1214,7 +1214,7 @@ singlelinecheck=off
         \label{tab:cl7stdcount}
     \end{table}
 
-    Klaster 7 w tabeli~\ref{tab:cl7std} zawiera 2 kraje - Iran i Irak.
+    Klaster 7 w tabeli~\ref{tab:cl7std} zawiera 2 kraje - Iran i~Irak.
     W tabeli~\ref{tab:cl7stdcount} obserwujemy, że w klastrze 7 żaden z parametrów nie wyróżnia się.
 
     \begin{table}[!htp]
@@ -1283,9 +1283,9 @@ singlelinecheck=off
     \end{table}
 
     W tabeli~\ref{tab:cl_mean_summ} wyraźnie oddziela się klaster 8 - hegemon, Stany Zjednoczone Ameryki - bardzo wysokie PKB, wydatki na zdrowie, wysokie wydatki na zbrojenia, niski import.
-    Kolejnym wyróżniają się klastrem jest klaster 7 - Irak i Iran - najwyższe średni wydatki na zbrojenia.
-    Klaster 3 - kraje bogate - wysokie PKB i wydatki na opiekę
-    Klaster 4 - ubogie kraje afrykańskie i bliskiego wschodu - niskie PKB.
+    Kolejnym wyróżniają się klastrem jest klaster 7 - Irak i~Iran - najwyższe średni wydatki na zbrojenia.
+    Klaster 3 - kraje bogate - wysokie PKB i~wydatki na opiekę
+    Klaster 4 - ubogie kraje afrykańskie i~bliskiego wschodu - niskie PKB.
 
     \begin{table}[!htp]
         \centering
@@ -1298,7 +1298,7 @@ singlelinecheck=off
     Zarówno dla danych nie poddanych oraz poddanych standaryzacji Stany Zjednoczono otrzymały własny klaster.
     Jest to spowodowane znaczącą przewagą liczby zdarzeń w porównaniu z innymi krajami.
 
-    Dla danych standaryzowanych Polska i Szwecja są jedynymi krajami europejskim w klastrze~\ref{tab:cl5std}.
+    Dla danych standaryzowanych Polska i~Szwecja są jedynymi krajami europejskim w klastrze~\ref{tab:cl5std}.
 
 
     \chapter{Podsumowanie}\label{ch:podsumowanie}
@@ -1342,7 +1342,7 @@ singlelinecheck=off
     W tym dodatku przedstawione zostały wyniki klasteryzacji danych nie poddanych standaryzacji.
 
     W tabelach od~\ref{tab:cl0} do~\ref{tab:cl9} przedstawione zostały wyniki grupowania.
-    Dodatkowo zawarto informacje o liczbie ludności i PKB na osobę pochodzące z biblioteki GeoPandas~\cite{geopandas}.
+    Dodatkowo zawarto informacje o~liczbie ludności i~PKB na osobę pochodzące z biblioteki GeoPandas~\cite{geopandas}.
 
     Klaster 0 w tabeli~\ref{tab:cl0} zawiera 4 kraje.
     \begin{table}[!htp]
