@@ -735,40 +735,42 @@ singlelinecheck=off
     \paragraph{Polska}
 
     Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Polski z wybranymi krajami w czasie.
-
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/PL/POLConnection.png}
         \caption{Siła połączenia Polski z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:PLConnection}
     \end{figure}
+    Pierwsza pozycja pod względem siły powiązania zmienia się w czasie.
+    Od kwietnia 2018 do października 2019 zajmowały ją Stany Zjednoczone Ameryki.
+    W pozostałym okresie obserwujemy największą siłę powiązania z Rosją oraz Ukrainą.
 
     \paragraph{Rosja}
 
-    Wykres~\ref{fig:RUSConnection} przedstawia siłę połączenia Rosji z wybranymi krajami w czasie.
-
+    Wykres~\ref{fig:RUSConnection} przedstawia siłę połączenia Rosji z Niemcami oraz Polską w czasie
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/RUS/RUSConnection.png}
         \caption{Siła połączenia Rosji z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:RUSConnection}
     \end{figure}
+    W całym analizowanym okresie siła połączenia między Rosją a Niemcami jest większa od siły połączenie Rosji z Polską.
+    W czterech przypadkach obserwujemy wyraźną korelację wzrostu siły połączenia z Polską i z Niemcami.
 
     \paragraph{Niemcy}
 
     Wykres~\ref{fig:DEUConnection} przedstawia siłę połączenia Niemiec z wybranymi krajami w czasie.
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/DEU/DEUConnection.png}
         \caption{Siła połączenia Niemiec z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:DEUConnection}
     \end{figure}
+    Podobnie jak na wykresie~\ref{fig:RUSConnection} w całym analizowanym okresie siła połączenia z Polską jest mniejsza od siły połączenia z Rosją.
 
     \paragraph{Stany Zjednoczone}
 
-    Wykres~\ref{fig:PLConnection} przedstawia siłę połączenia Stanów Zjednoczonych z wybranymi krajami w czasie.
+    Wykres~\ref{fig:USAConnection} przedstawia siłę połączenia Stanów Zjednoczonych z wybranymi krajami w czasie.
 
     \begin{figure}[!htp]
         \centering
@@ -776,58 +778,60 @@ singlelinecheck=off
         \caption{Siła połączenia Stanów Zjednoczonych z wybranymi krajami w czasie. (źródło: opracowanie własne)}
         \label{fig:USAConnection}
     \end{figure}
+    Obserwujemy znacznie wyższą siłę połączenia Stanów Zjednoczonych z Rosją, niż z Niemcami oraz Polską.
+    W lipcu 2017 obserwujemy korelację wzrostu siły połączenia Stanów Zjednoczonych z 3 analizowanymi krajami.
+    W okresie od września 2017 do października 2018 obserwujemy zwiększoną siłę połączenia Stanów Zjednoczonych z Rosją.
 
     \subsection{Analiza symetryczności siły powiązania}
 
     \paragraph{Polska - Niemcy - Polska}
 
     Wykres~\ref{fig:POL-DEU-POL} przedstawia symetryczność siły połączenia Polski i~Niemiec w czasie.
-
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-DEU-POL.png}
         \caption{Symetryczność siły połączenia Polski i~Niemiec w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-DEU-POL}
     \end{figure}
+    Obserwujemy okresy korelacji siły połączenia Polski z Niemcami oraz Niemiec z Polską.
+    W całym analizowanym okresie połączenie Polski z Niemcami jest silniejsze niż Niemiec z Polską.
 
     \paragraph{Polska - Rosja - Polska}
 
     Wykres~\ref{fig:POL-RUS-POL} przedstawia symetryczność siły połączenia Polski i~Rosji w czasie.
-
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-RUS-POL.png}
         \caption{Symetryczność siły połączenia Polski i~Rosji w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-RUS-POL}
     \end{figure}
+    W porównaniu z wykresem~\ref{fig:POL-DEU-POL} obserwujemy słabsze połączenie Rosji z Polską niż Niemiec z Polską oraz silniejsze połączenie Polski z Rosją niż Polski z Niemcami.
 
     \paragraph{Polska - Stany Zjednoczone - Polska}
 
     Wykres~\ref{fig:POL-USA-POL} przedstawia symetryczność siły połączenia Polski i~Stanów Zjednoczonych w czasie.
-
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ConnectionSymmetry/POL-USA-POL.png}
         \caption{Symetryczność siły połączenia Polski i~Stanów Zjednoczonych w czasie. (źródło: opracowanie własne)}
         \label{fig:POL-USA-POL}
     \end{figure}
+    Spośród analizowanych sił powiązania między Polską a Stanami Zjednoczonymi obserwujemy największą niesymetryczność relacji.
+    Polska jest znacznie silniej powiązana ze Stanami Zjednoczonymi niż Stany Zjednoczone z Polską.
+    Siła połączenia Stanów Zjednoczonych z Polską w całym analizowanym okresie utrzymuje się poniżej 0,5\%.
 
 
     \section{Analiza kodu podstawowego Fight}\label{sec:analiza-kodu-podstawowego-fight}
 
     Wykres~\ref{fig:Fight} przedstawia procentową liczbę państw z jakimi dany wybrany kraj ma zdarzenia fight w czasie.
-    Obserwujemy wystąpienie zdarzeń fight dla Polski mimo, iż nie prowadziła ona działań wojennych w tym okresie.
-    Spowodowane jest to możliwością klasyfikowania do fight uroczystości mających na celu upamiętnienie wydarzeń historycznych.
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/ERC/Fight.png}
         \caption{Procentowa liczba państw z jakimi dany wybrany kraj ma zdarzenia fight w czasie. (źródło: opracowanie własne)}
         \label{fig:Fight}
     \end{figure}
+    Obserwujemy wystąpienie zdarzeń fight dla Polski mimo, iż nie prowadziła ona działań wojennych w tym okresie.
+    Spowodowane jest to możliwością klasyfikowania do fight uroczystości mających na celu upamiętnienie wydarzeń historycznych.
 
 
     \chapter[Grupowanie państw]{Grupowanie państw o~podobnych cechach oraz~porównanie z danymi zewnętrznymi}\label{ch:grupowanie-państw-opodobnych-cechach-orazporównanie-z-danymi-zewnętrznymi}
