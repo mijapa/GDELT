@@ -125,6 +125,32 @@ singlelinecheck=off
 
     \section{Przegląd istniejących analiz} \label{sec:przeglad}
     Zbiór danych GDELT był wielokrotnie analizowany i wykorzystywany w pracach naukowych.
+    Dla słowa kluczowego GDELT multiwyszukiwarka EDS zwraca ponad 700 wyników.
+    Poniżej opisanych zostanie kilka wybranych prac.
+
+    W artykule~\cite{Yuan2017} autorzy proponują miarę siły połączenia między krajami.
+    Identyfikowane są różne wzorce połączeń pomiędzy Chinami i 15 istotnymi krajami.
+
+    W badaniu~\cite{Kwak2016} autorzy porównują zbiór danych GDELT oraz EventRegistry pod względem rozmiaru, źródeł oraz geografii wiadomości.
+    GDELT okazuje się być większy zarówno pod względem ilości dokumentów jak i ilości źródeł.
+    Każdy ze zbiorów posiada unikalne źródła publikujące wiele dokumentów.
+
+    W artykule~\cite{Keertipati2014} autorzy analizują zbiór GDELT pod kątem informacji o konfliktach i pokoju.
+    Badanie udowadnia, ze GDELT wychwytuje globalne trendy i pozwala na zidentyfikowanie znaczących punktów w wydarzeniach konfliktowych.
+    Zaproponowany zostaje czteropoziomowy model do zaprojektowania panelu analizy zdarzeń.
+
+    W badaniu~\cite{Ma2017} autorzy dokonują porównania tonu wypowiedzi na temat wiadomości międzynarodowych zgromadzonych w GDELT.
+    Porównanie wypowiedzi z dziewięciu krajów pokazało, że mimo otrzymania różnej klasyfikacji dla wiadomości międzynarodowych w tym samym temacie, średni ton pozostaje zbliżony.
+
+    W pracy~\cite{Wang2018} autorzy przedstawiają model metadanych dla zdarzeń politycznych.
+    Na bazie tego modelu stworzono zbiór danych który został przetestowany poprzez wygenerowania raportu o wizycie prezydenta Trump'a w chinach.
+
+    W artykule~\cite{Bodas-Sagi2016} autorzy analizują opinie na temat polityki energetycznej Hiszpanii przy użyciu GDELT.
+    Stworzone wskaźniki sentymentu zostały ocenione poprzez porównanie ze zmiennymi rynku energii takimi jak cen i popyt.
+    Korelacja do dziennych cen energii nie została odnaleziona.
+
+    W badaniu~\cite{Yuan2017a} autor bada efektywność tradycyjnych modeli szeregów czasowych w przewidywaniu trendów w doniesieniach medialnych.
+    Wnioskiem autora model autoregresyjny ze średnią ruchomą (ARIMA) ma ograniczone zastosowanie w określaniu międzypaństwowych relacji w odniesieniu do wielkich zbiorów danych.
 
 
     \chapter{Koncepcja}\label{ch:koncepcja}
@@ -244,6 +270,8 @@ singlelinecheck=off
     W notatnikach, zapisane wcześniej na dysku dane, będą importowane, a następnie grupowane tak aby na pojedynczym wykresie zamieści możliwie dużo informacji.
     Przedostatnim etapem będzie selekcja najistotniejszych danych w celu poprawy czytelności wykresów.
     Na końcu tworzone będą i~zapisywane do plików wizualizacje danych.
+
+    Dane, programy oraz efekty przeprowadzonych prac można znaleźć w repozytorium \href{https://github.com/mijapa/GDELT}{GitHub}.
 
 
     \chapter{Wstępna analiza danych}\label{ch:wstępna-analiza-danych}
@@ -535,7 +563,7 @@ singlelinecheck=off
         \label{fig:DEUPERCpercinTIME}
     \end{figure}
     Proporcja poszczególnych kodów podstawowych w analizowanym okresie utrzymuje się.
-    Wyraźnie dominuje kod podstawowy \texit{CONSULT}.
+    Wyraźnie dominuje kod podstawowy \textit{CONSULT}.
 
     \paragraph{Podstawowe kody zdarzeń między Niemcami a wybranymi krajami}
 
@@ -694,7 +722,7 @@ singlelinecheck=off
         \label{fig:USAPERCpercinTIME}
     \end{figure}
     Proporcja między kodami zdarzeń podstawowych w analizowanym okresie czasu pozostaje na podobnym poziomie.
-    Dominują kod podstawowy \texit{CONSULT} (oscyluje w okolicach 25\%) oraz kod podstawowy \textit{MAKE PUBLIC STATEMENT} (oscyluje w okolicach 17\%).
+    Dominują kod podstawowy \textit{CONSULT} (oscyluje w okolicach 25\%) oraz kod podstawowy \textit{MAKE PUBLIC STATEMENT} (oscyluje w okolicach 17\%).
 
     \paragraph{Podstawowe kody zdarzeń między Stanami Zjednoczonymi a wybranymi krajami}
 
@@ -843,7 +871,7 @@ singlelinecheck=off
     W tym rozdziale zostały opisane wyniki grupowania państw, z wykorzystaniem metody k-średnich, w oparciu o~podobne cechy z bazy danych GDELT.
     Dane zostały porównane z danymi zewnętrznymi.
     W części~\ref{sec:dane-niestandaryzowane} przedstawione zostały wyniki grupowania danych niestandaryzowanych.
-    Część~\ref{sec:dane-ustandaryzowane} zawiera wyniki grupowania danych ustandaryzowanych przy pomocy StandardScaler'a.
+    Część \ref{sec:dane-ustandaryzowane} zawiera wyniki grupowania danych ustandaryzowanych przy pomocy StandardScaler'a.
     Do grupowania krajów został wykorzystany wektor cech opisany w rozdziale~\ref{ch:koncepcja}.
 
 
