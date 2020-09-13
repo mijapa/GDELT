@@ -165,16 +165,16 @@ singlelinecheck=off
     W pierwszej kolejności zostaną przeprowadzone wstępne analizy które pozwolą lepiej zrozumieć specyfikę danych.
     Następnie zostanie przeprowadzona klasteryzacja.
     Do grupowania państw w klastry zostanie wykorzystany wektor cech z bazy GDELT oraz algorytm klastrowania k-średnich.
-    Wektor będzie składał się z:
+    Wektor dla każdego kraju będzie składał się z:
     \begin{enumerate}
-        \item[•] liczby zdarzeń dla których kraj jest aktorem 1 (events),
-        \item[•] liczby wzmianek (numMentions) - całkowitej liczba wzmianek o~tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone,
-        \item[•] stosunku liczby zdarzeń material conflict do material cooperation z quad description (materialConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
-        \item[•] stosunku liczby zdarzeń verbal conflict do verbal cooperation z quad description (verbalConfCoop) - stosunek czterokodów z podstawowej klasyfikacji
-        \item[•] średniego średniego tonu (avgAvgTone) - średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o~tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone. Waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni).
-        \item[•] średniej miary Goldsteina (avgGoldstein) - skala Goldsteina przypisuje wynik liczbowy od -10 do +10, wychwytując teoretyczny potencjalny wpływ, jaki rodzaj zdarzenia będzie miał na stabilność kraju,
-        \item[•] liczby zdarzeń Fight (fightCount)
-        \item[•] liczby zdarzeń Express intent to cooperate (expressCount)
+        \item[•] liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1 (w programie oznaczone jako \textit{Events}),
+        \item[•] sumy liczby wzmianek (całkowitej liczby wzmianek o~tym wydarzeniu, we wszystkich dokumentach źródłowych podczas 15-minutowej aktualizacji, w której zostało po raz pierwszy zauważone) w analizowanym okresie, dla wydarzeń w których dany kraj jest aktorem 1 (w programie oznaczone jako \textit{numMentions}),
+        \item[•] stosunku liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, oznaczonych \textit{quad class} jako \textit{material conflict} do liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, oznaczonych \textit{quad class} jako \textit{material cooperation} (w programie oznaczone jako \textit{materialConfCoop}),
+        \item[•] stosunku liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, oznaczonych \textit{quad class} jako \textit{verbal conflict} do liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, oznaczonych \textit{quad class} jako \textit{verbal cooperation} (w programie oznaczone jako \textit{verbalConfCoop}),
+        \item[•] średniego, dla wszystkich zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, średniego tonu (średni „ton” wszystkich dokumentów zawierających jedną lub więcej wzmianek o~tym wydarzeniu, podczas 15-minutowej aktualizacji, w której zostało ono po raz pierwszy zauważone, waha się od -100 (skrajnie ujemny) do +100 (skrajnie dodatni)) (w programie oznaczone jako \textit{avgAvgTone}),
+        \item[•] średniej, dla wszystkich zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, miary Goldsteina (skala Goldsteina przypisuje wynik liczbowy od -10 do +10, wychwytując teoretyczny potencjalny wpływ, jaki rodzaj zdarzenia będzie miał na stabilność kraju) (w programie oznaczone jako \textit{avgGoldstein}),
+        \item[•] liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, oznaczonych \textit{event root code} jako \textit{fight} Fight (w programie oznaczone jako \textit{fightCount}),
+        \item[•] liczby zdarzeń w analizowanym okresie, w których dany kraj jest aktorem 1, oznaczonych \textit{event root code} jako \textit{Express intent to cooperate}  (w programie oznaczone jako \textit{expressCount}).
     \end{enumerate}
     Dane wykorzystane w tym doświadczeniu pochodzą ze stycznia 2020 roku.
     Przed dokonaniem klasteryzacji odrzucone zostaną wydarzenia z kodami krajów cameo niezgodnymi z kodami ISO 3166-1 alfa-3~\cite{iso_alfa3}.
