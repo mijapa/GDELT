@@ -73,6 +73,7 @@ singlelinecheck=off
     Rozdział~\ref{ch:grupowanie-państw-opodobnych-cechach-orazporównanie-z-danymi-zewnętrznymi} opisuje grupowanie państw o~podobnych cechach.
     W ostatnim rozdziale~\ref{ch:podsumowanie} dokonano podsumowania przeprowadzonych analiz.
     Dodatek~\ref{ch:dodatek_niestd} zawiera szczegółowe wyniki grupowania dla danych niestandaryzowanych.
+    Dodatek~\ref{ch:parametry-klastrów---dane-standaryzowane} zawiera parametry klastrów dla danych standaryzowanych.
     Dodatek~\ref{ch:korzystanie-z-programu} zawiera instrukcję uruchomienia kodu projektu.
     Na końcu dokumentu dołączony został spis bibliograficzny.
 
@@ -1023,7 +1024,6 @@ singlelinecheck=off
 
     Na wykresie~\ref{fig:density_avgavgtone} wyróżnia się klaster 8 (największa gęstość) oraz klastry 7 i~8.
 
-
     \begin{figure}[!htp]
         \centering
         \includegraphics[width=\linewidth]{fig/CLUST/density_avgGoldstein.png}
@@ -1061,8 +1061,7 @@ singlelinecheck=off
     Poszczególne miary zostały podzielone na 5 równych przedziałów wg skali logarytmicznej.
     Kolory, od przedziału z najmniejszymi wartościami do tego z największymi, to: czerwony (bardzo niskie), pomarańczowy (niskie), żółty (średnie), jasnozielony (wysokie), zielony (bardzo wysokie).
     W tabelach od~\ref{tab:cl1stdcount} do~\ref{tab:cl9stdcount} została przedstawiona procentowa ilość państw w poszczególnych przedziałach w obrębie klastrów.
-    W tabelach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszczególnych klastrów: średnia, mediana, odchylenie standardowe, minimum, maksimum.
-
+    W dodatku~\ref{ch:parametry-klastrów---dane-standaryzowane} dołączone zostały tabele ze szczegółowymi parametrami klastrów.
 
     \begin{table}[!htp]
         \centering
@@ -1084,13 +1083,6 @@ singlelinecheck=off
 
     \begin{table}[!htp]
         \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust0std_desc.png}
-        \caption{Parametry klastra 0 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl0std_desc}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
         \includegraphics[width=\linewidth]{tables/CLUST/cluster1stdkmeans.png}
         \caption{Klaster 1 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl1std}
@@ -1108,13 +1100,6 @@ singlelinecheck=off
 
     \begin{table}[!htp]
         \centering
-        \caption{Parametry klastra 1 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl1std_desc}
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust1std_desc.png}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
         \includegraphics[width=\linewidth]{tables/CLUST/cluster2stdkmeans.png}
         \caption{Klaster 2 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl2std}
@@ -1127,28 +1112,14 @@ singlelinecheck=off
         \label{tab:cl2stdcount}
     \end{table}
 
-    Klaster 2 w tabeli~\ref{tab:cl2std} zawiera 3 kraje - Botswanę, Gwineę Bissau oraz .
+    Klaster 2 w tabeli~\ref{tab:cl2std} zawiera 3 kraje - Botswanę, Gwineę Bissau oraz Tunezję.
     W tabeli~\ref{tab:cl2stdcount} obserwujemy, że wszystkie państwa w klastrze 2 charakteryzują się niskim eksportem (pomiędzy 1.2\%, a 2.5\% PKB).
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust2std_desc.png}
-        \caption{Parametry klastra 2 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl2std_desc}
-    \end{table}
 
     \begin{table}[!htp]
         \centering
         \includegraphics[width=\linewidth]{tables/CLUST/cluster3stdkmeans.png}
         \caption{Klaster 3 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl3std}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust3std_desc.png}
-        \caption{Parametry klastra 3 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl3std_desc}
     \end{table}
 
     \begin{table}[!htp]
@@ -1182,13 +1153,6 @@ singlelinecheck=off
 
     \begin{table}[!htp]
         \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust4std_desc.png}
-        \caption{Parametry klastra 4 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl4std_desc}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
         \includegraphics[width=\linewidth]{tables/CLUST/cluster5stdkmeans.png}
         \caption{Klaster 5 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl5std}
@@ -1204,13 +1168,6 @@ singlelinecheck=off
     Klaster 5 w tabeli~\ref{tab:cl5std} zawiera 21 krajów.
     Przykłady ważniejszych państw w tym klastrze to: Chile, Nigeria, Pakistan, Polska, Szwecja.
     W tabeli~\ref{tab:cl5stdcount} obserwujemy, że w klastrze 5 przeważają kraje ze średnimi wydatkami na opiekę zdrowotną (pomiędzy 4.9\%, a 7.9\% PKB).
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust5std_desc.png}
-        \caption{Parametry klastra 5 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl5std_desc}
-    \end{table}
 
     \begin{table}[!htp]
         \centering
@@ -1232,13 +1189,6 @@ singlelinecheck=off
 
     \begin{table}[!htp]
         \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust6std_desc.png}
-        \caption{Parametry klastra 6 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl6std_desc}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
         \includegraphics[width=\linewidth]{tables/CLUST/cluster7stdkmeans.png}
         \caption{Klaster 7 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl7std}
@@ -1253,13 +1203,6 @@ singlelinecheck=off
 
     Klaster 7 w tabeli~\ref{tab:cl7std} zawiera 2 kraje - Iran i~Irak.
     W tabeli~\ref{tab:cl7stdcount} obserwujemy, że w klastrze 7 żaden z parametrów nie wyróżnia się.
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust7std_desc.png}
-        \caption{Parametry klastra 7 - dane standaryzowane}
-        \label{tab:cl7std_desc}
-    \end{table}
 
     \begin{table}[!htp]
         \centering
@@ -1280,13 +1223,6 @@ singlelinecheck=off
 
     \begin{table}[!htp]
         \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust8std_desc.png}
-        \caption{Parametry klastra 8 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl8std_desc}
-    \end{table}
-
-    \begin{table}[!htp]
-        \centering
         \includegraphics[width=\linewidth]{tables/CLUST/cluster9stdkmeans.png}
         \caption{Klaster 9 - dane standaryzowane. (źródło: opracowanie własne)}
         \label{tab:cl9std}
@@ -1302,13 +1238,6 @@ singlelinecheck=off
     Klaster 9 w tabeli~\ref{tab:cl9std} zawiera 31 krajów.
     Przykłady ważniejszych państw w tym klastrze to: Gwatemala, Honduras, Kuwejt, Meksyk, Słowacja.
     W tabeli~\ref{tab:cl9stdcount} obserwujemy, że klaster 9 wyróżnia sie niskimi wydatkami na zbrojenia (pomiędzy 0.7\%, a 1.48\% PKB).
-
-    \begin{table}[!htp]
-        \centering
-        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust9std_desc.png}
-        \caption{Parametry klastra 9 - dane standaryzowane. (źródło: opracowanie własne)}
-        \label{tab:cl9std_desc}
-    \end{table}
 
     Tabele~\ref{tab:cl_mean_summ} oraz~\ref{tab:cl_median_summ} zawierają podsumowanie parametrów poszczególnych klastrów.
 
@@ -1346,7 +1275,10 @@ singlelinecheck=off
     \section{Wnioski}\label{sec:wnioski}
     Przeprowadzona analiza danych ze zbioru GDELT pozwoliła na wybranie takiego wektora cech który umożliwił skuteczny podział państw - aktorów - na grupy.
     Udało się wykazać związek powstałych klastrów z rzeczywistymi cechami państw.
-    Najwyraźniejszymi
+    W klastrach pojawiają się anomalie.
+    Wyraźnym przykładem takiej anomalii jest klaster 5 do którego jako jedyne z państw europejskich trafiły Polska i Szwecja.
+    Być może potrzebna jest zmiana wektora służącego do klasteryzacji.
+    Propozycja zmiany wektora została przedstawiona w części~\ref{sec:dalsze-kierunki-rozwoju}.
 
 
     \section{Dalsze kierunki rozwoju}\label{sec:dalsze-kierunki-rozwoju}
@@ -1463,6 +1395,75 @@ singlelinecheck=off
 
     Dla danych niestandaryzowanych Polska trafiła do klastra~\ref{tab:cl9} między innymi z Egiptem, Grecją, Irlandia oraz Brazylią.
     Wyróżnia się mniejsza grupa~\ref{tab:cl0} do której trafiły Chiny, Rosja, Wielka Brytania oraz Iran.
+
+
+    \chapter{Parametry klastrów - dane standaryzowane}\label{ch:parametry-klastrów---dane-standaryzowane}
+    \chaptermark{Parametry klastrów - d. standar.}
+    W tabelach od~\ref{tab:cl0std_desc} do~\ref{tab:cl9std_desc} pokazane zostały parametry poszczególnych klastrów uzyskanych podczas grupowania przeprowadzonego w rozdziale~\ref{ch:grupowanie-państw-opodobnych-cechach-orazporównanie-z-danymi-zewnętrznymi}: średnia, mediana, odchylenie standardowe, minimum, maksimum.
+    Pominięty został klaster 8 który zawiera tylko jeden element.
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust0std_desc.png}
+        \caption{Parametry klastra 0 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl0std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \caption{Parametry klastra 1 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl1std_desc}
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust1std_desc.png}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust2std_desc.png}
+        \caption{Parametry klastra 2 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl2std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust3std_desc.png}
+        \caption{Parametry klastra 3 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl3std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust4std_desc.png}
+        \caption{Parametry klastra 4 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl4std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust5std_desc.png}
+        \caption{Parametry klastra 5 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl5std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust6std_desc.png}
+        \caption{Parametry klastra 6 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl6std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust7std_desc.png}
+        \caption{Parametry klastra 7 - dane standaryzowane}
+        \label{tab:cl7std_desc}
+    \end{table}
+
+    \begin{table}[!htp]
+        \centering
+        \includegraphics[width=\linewidth]{tables/CLUST/desc/clust9std_desc.png}
+        \caption{Parametry klastra 9 - dane standaryzowane. (źródło: opracowanie własne)}
+        \label{tab:cl9std_desc}
+    \end{table}
 
 
     \chapter{Korzystanie z programu}\label{ch:korzystanie-z-programu}
